@@ -1,0 +1,10 @@
+  <%= attachment_image_tag @post, :image %>
+  <p>バイク名: <%= @post.post_bike %></p>
+  <p>タイトル：<%= @post.title %></p>
+  <p>説明：<%= @post.post_profile %></p>
+  <p>ユーザーネーム：<%= @post.user.name %></p>
+  <p>投稿日時：<%= @post.created_at.strftime('%Y/%m/%d') %></p>
+  <% if @post.user == current_user %>
+   <%= link_to "編集", edit_post_path(@post) %>
+   <%= link_to "削除", post_path(@post), method: :delete %>
+  <% end %>

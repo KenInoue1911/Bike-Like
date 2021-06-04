@@ -1,0 +1,20 @@
+<p> 名前: <%= @user.name %></p>
+<p>年齢: <%= @user.age %></p>
+<p>性別: <%= @user.gender %></p>
+<p>好きなバイク: <%= @user.bike %></p>
+<p>自己紹介: <%= @user.profile %></p>
+<p><%= link_to "フォロー数", mypage_path %>:<%= current_user.follower.count %></p>
+<p>フォロワー数: <%= current_user.followed.count %></p>
+
+
+<% if current_user != @user %>
+  <% if current_user.following?(@user) %>
+    <%= link_to 'フォロー外す', user_relationships_path(@user.id), method: :delete %>
+  <% else %>
+    <%= link_to 'フォローする', user_relationships_path(@user.id), method: :POST %>
+  <% end %>
+<% end %>
+  <% if @user.id == current_user.id %>
+    <p><%= link_to "プロフィール編集", edit_user_path(@user) %></p>
+    <p><%= link_to "退会する", unsubscribe_path(@user) %></p>
+  <% end %>
