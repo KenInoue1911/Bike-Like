@@ -5,6 +5,19 @@
   <p>ユーザーネーム：<%= @post.user.name %></p>
   <p>投稿日時：<%= @post.created_at.strftime('%Y/%m/%d') %></p>
 
+  <% if @post.favorited_by?(current_user) %>
+  <p><%= link_to post_favorites_path(@post), method: :delete do %>💛
+  <%= @post.favorites.count %>いいね</p>
+  <% end %>
+  <% else %>
+  <p>
+   <%= link_to post_favorites_path(@post), method: :post do %>💛
+   <%= @post.favorites.count %>いいね</p>
+   <% end %>
+  </p>
+  <% end %>
+
+
   <p>コメント件数: <%= @post.post_comments.count %></p>
   <% @post.post_comments.each do |post_comment| %>
   <p>ユーザーネーム: <%= post_comment.user.name %></p>
