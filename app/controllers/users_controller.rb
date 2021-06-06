@@ -14,7 +14,9 @@ class UsersController < ApplicationController
   end
 
   def index
-    @users = User.all
+    # gem ransackによる検索機能
+    @q = User.ransack(params[:q])
+    @users = @q.result(distinct: true)
   end
 
   # 退会画面

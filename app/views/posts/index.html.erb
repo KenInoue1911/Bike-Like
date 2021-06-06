@@ -1,5 +1,14 @@
+<%= search_form_for @q do |f| %>
+<%= f.label :title, "タイトル" %>
+<%= f.search_field :title_cont %>
+<%= f.label :post_bike, "バイクタイトル" %>
+<%= f.search_field :post_bike_cont %>
+
+ <%= f.submit "検索" %>
+<% end %>
+
 <% @posts.each do |post| %>
-<div>
+
   <%= link_to post_path(post.id) do %>
   <%= attachment_image_tag post, :image %>
   <% end %>
@@ -8,6 +17,4 @@
   <p>説明：<%= post.post_profile %></p>
   <p>ユーザーネーム：<%= post.user.name %></p>
   <p><%= link_to "#{post.post_comments.count} コメント", post_path(post.id) %></p>
-</div>
 <% end %>
-<%= paginate @posts %>
