@@ -1,0 +1,37 @@
+<div>
+  フォロー数： <%= current_user.follower.count %>
+  フォロワー数：<%= current_user.followed.count %>
+</div><br><br>
+<table>
+    <caption>フォロー中</caption>
+    <thead>
+        <tr>
+            <th>ユーザー名</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @following_users.each do |following_user| %>
+        <tr>
+            <td><%= following_user.name %></td>
+            <td><%= link_to 'フォロー外す', user_relationships_path(following_user.id), method: :delete %></td>
+        </tr>
+        <% end %>
+    </tbody>
+</table><br><br>
+
+<table>
+    <caption>フォロワー</caption>
+    <thead>
+        <tr>
+            <th>フォロワー名</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @follower_users.each do |follower_user| %>
+        <tr>
+            <td><%= follower_user.name %></td>
+        </tr>
+        <% end %>
+    </tbody>
+</table>
