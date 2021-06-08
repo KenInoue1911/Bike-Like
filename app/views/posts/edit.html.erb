@@ -1,0 +1,12 @@
+<h1>編集フォーム</h1>
+<%= form_with model: @post, local:true do |f| %>
+  <h4>画像</h4>
+  <%= f.attachment_field :image %>
+  <h4>バイク名</h4>
+  <%= f.text_field :post_bike %>
+  <h4>タイトル</h4>
+  <%= f.text_field :title %>
+  <h4>説明</h4>
+  <%= f.text_area :post_profile %>
+  <%= f.submit '編集' %>
+<% end %>
