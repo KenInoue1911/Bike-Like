@@ -1,0 +1,9 @@
+<% @post.post_comments.each do |post_comment| %>
+  <p>ユーザーネーム: <%= post_comment.user.name %></p>
+  <p>コメント日時：<%= post_comment.created_at.strftime('%Y/%m/%d') %></p>
+  <p>コメント内容 : <%= post_comment.comment %></p>
+  <% if post_comment.user == current_user %>
+    <%= link_to "コメントを削除", post_post_comment_path(post_comment.post, post_comment), remote: :true,  method: :delete %>
+  <% end %>
+<% end %>
+

@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  
   def new
     @post = Post.new
   end
@@ -40,9 +41,9 @@ class PostsController < ApplicationController
     @post.update(post_params)
     redirect_to post_path(@post.id)
   end
-  
+
   def top
-    # 3つまでお気に入りの多い順に記事を
+    # 3つまでお気に入りの多い順に記事を表示
     @all_ranks = Post.find(Favorite.group(:post_id).order('count(post_id) desc').limit(3).pluck(:post_id))
   end
 

@@ -69,3 +69,4 @@ gem "refile-mini_magick"
 gem 'kaminari','~> 1.2.1'
 gem 'ransack'
 gem 'acts-as-taggable-on','~> 7.0'
+gem 'jquery-rails'
