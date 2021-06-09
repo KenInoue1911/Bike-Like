@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   # 論理削除用のルーティング
   patch '/users/:id/withdrawal' => 'users#withdrawal', as: 'withdrawal'
 
-  
+
   resources :users do
     resource :relationships, only: [:create, :destroy]
     get 'relationships/followings' => 'relationships#followings', as: 'follows'
@@ -21,6 +21,6 @@ Rails.application.routes.draw do
     resource :favorites, only: [:create, :destroy]
   end
   resources :messages, only: [:create]
-  resources :rooms, only: [:create, :show, :index]
+  resources :rooms, only: [:index, :show, :create]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
