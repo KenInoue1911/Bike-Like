@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
+    @posts = @user.posts
     # ユーザーがすでにルームに参加しているか判断
     @currentUserEntry = Entry.where(user_id: current_user.id)
     # ユーザー詳細ページのユーザーがルームに参加しているか判断
@@ -56,7 +57,6 @@ class UsersController < ApplicationController
     reset_session
     redirect_to root_path
   end
-
 
   private
 
