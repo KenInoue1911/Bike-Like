@@ -1,2 +1,4 @@
-$("#follower_button").html("<%= j(render partial: 'users/follower', locals: {user: @user}) %>");
-console.log("create")
+$(".follow-count").html("<%= j(link_to @user.followers.count, user_followers_path(@user.id)) %>")
+console.log("ss3")
+$(".follow_<%= @user.id %>").html("<%= j(render 'relationships/follow-btn', user: @user) %>");
+

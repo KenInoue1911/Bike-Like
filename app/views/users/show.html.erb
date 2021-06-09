@@ -1,11 +1,18 @@
-<p> 名前: <%= @user.name %></p>
+
+
+
+
+<p>名前: <%= @user.name %></p>
 <p>年齢: <%= @user.age %></p>
 <p>性別: <%= @user.gender %></p>
 <p>好きなバイク: <%= @user.bike %></p>
 <p>自己紹介: <%= @user.profile %></p>
-<p><%= link_to "フォロー数", mypage_path %>:<%= current_user.follower.count %></p>
-<p>フォロワー数: <%= current_user.followed.count %></p>
-
+<p>フォロー</p>
+<%= link_to @user.followings.count, user_follows_path(@user.id) %>
+<p>フォロワー</p>
+<div class="follow-count">
+<%= link_to @user.followers.count, user_followers_path(@user.id) %>
+</div>
 <% if @user.id == current_user.id %>
 
 <% else %>
@@ -21,11 +28,42 @@
  <% end %>
  <% end %>
 
-<div id="follower_button">
- <%= render partial: 'users/follower', locals: {user: @user} %>
- </div>
+
+
+<% if current_user != @user %>
+  <div class="follow_<%= @user.id %>">
+    <%= render 'relationships/follow-btn', user: @user %>
+  </div>
+  <% end %>
+
 
   <% if @user.id == current_user.id %>
     <p><%= link_to "プロフィール編集", edit_user_path(@user) %></p>
     <p><%= link_to "退会する", unsubscribe_path(@user) %></p>
   <% end %>
+
+
+
+<% @posts.each do |post| %>
+  <%= link_to post_path(post.id) do %>
+  <%= attachment_image_tag post, :image %>
+  <p>タイトル：<%= post.title %></p>
+   <% end %>
+  <p>バイク名: <%= post.post_bike %></p>
+  <p>説明：<%= post.post_profile %></p>
+  <p>ユーザーネーム：
+<%= link_to user_path(post.user) do %>
+  <%= post.user.name %></p>
+  <% end %>
+
+
+  <p><%= link_to "#{post.post_comments.count} コメント", post_path(post.id) %></p>
+  <div id="favorite_button_<%=post.id%>">
+ <%= render partial: 'favorites/favorite-btn', locals: {post: post} %>
+ </div>
+
+
+
+  <!--tag機能の部分点プレー-->
+  <p><%= render 'posts/tag_list', tag_list: post.tag_list %></p>
+<% end %>

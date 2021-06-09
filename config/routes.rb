@@ -4,12 +4,17 @@ Rails.application.routes.draw do
   get '/about' => 'homes#about'
   get '/mypage' => 'homes#mypage'
   get 'posts/top' => 'posts#top'
+  get 'posts/:id/favorite' => 'posts#favorite', as: 'favorite'
  # 退会確認画面
   get '/users/:id/unsubscribe' => 'users#unsubscribe', as: 'unsubscribe'
   # 論理削除用のルーティング
   patch '/users/:id/withdrawal' => 'users#withdrawal', as: 'withdrawal'
+
+  
   resources :users do
-  resource :relationships, only: [:create, :destroy]
+    resource :relationships, only: [:create, :destroy]
+    get 'relationships/followings' => 'relationships#followings', as: 'follows'
+    get 'relationships/followers' => 'relationships#followers', as: 'followers'
   end
   resources :posts do
     resources :post_comments, only: [:create, :destroy]

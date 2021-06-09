@@ -1,0 +1,8 @@
+<h1>フォロワー一覧</h1>
+
+      <!-- フォロワーがいる時といない時の表示 -->
+      <% if @users.empty? %>
+        <h3 class="no-followers text-center">ユーザはいません</h3>
+      <% else %>
+        <%= render 'relationships/index', users: @users %>
+      <% end %>

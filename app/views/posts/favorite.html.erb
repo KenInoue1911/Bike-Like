@@ -1,0 +1,20 @@
+
+  <h1>ブックマーク一覧</h1>
+
+    <% @favorites.each do |favorite| %>
+  <%= link_to post_path(favorite.post) do %>
+  <%= attachment_image_tag favorite.post, :image %>
+  <p>タイトル：<%= favorite.post.title %></p>
+   <% end %>
+  <p>バイク名: <%= favorite.post.post_bike %></p>
+  <p>説明：<%= favorite.post.post_profile %></p>
+  <p>ユーザーネーム：
+<%= link_to user_path(favorite.post.user) do %>
+  <%= favorite.post.user.name %></p>
+  <% end %>
+
+
+ <p><%= link_to "#{favorite.post.post_comments.count} コメント", post_path(favorite.post.id) %></p>
+ <p><%= render 'posts/tag_list', tag_list: favorite.post.tag_list %></p>
+
+  <% end %>

@@ -3,11 +3,17 @@
   <p>バイク名: <%= @post.post_bike %></p>
   <p>タイトル：<%= @post.title %></p>
   <p>説明：<%= @post.post_profile %></p>
-  <p>ユーザーネーム：<%= @post.user.name %></p>
+  <p>ユーザーネーム：
+  <%= link_to user_path(@post.user) do %>
+  <%= @post.user.name %></p>
+  <% end %>
+ 
   <p>投稿日時：<%= @post.created_at.strftime('%Y/%m/%d') %></p>
 <div id="favorite_button_<%=@post.id%>">
  <%= render partial: 'favorites/favorite-btn', locals: {post: @post} %>
  </div>
+ <p><%= render 'posts/tag_list', tag_list: @post.tag_list %></p>
+  
 
   <p>コメント件数: <%= @post.post_comments.count %></p>
 
