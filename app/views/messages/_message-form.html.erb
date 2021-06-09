@@ -1,0 +1,7 @@
+<%= form_with model: message, url: messages_path, local:true do |f| %>
+  <%= f.text_area :message, :placeholder => "メッセージを入力して下さい" , size: '135x6' %>
+  <%= f.hidden_field :room_id, :value => @room.id %><br>
+  <div class="messsage-submit-btn text-center">
+    <%= f.submit "投稿する", class: "btn btn-success" %>
+  </div>
+<% end %>
