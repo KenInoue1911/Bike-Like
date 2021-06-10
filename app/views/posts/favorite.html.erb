@@ -1,8 +1,8 @@
 
   <h1>ブックマーク一覧</h1>
-
+　　<% if @favorites.present? %>
     <% @favorites.each do |favorite| %>
-  <%= link_to post_path(favorite.post) do %>
+  <%= link_to post_path(favorite.post_id) do %>
   <%= attachment_image_tag favorite.post, :image %>
   <p>タイトル：<%= favorite.post.title %></p>
    <% end %>
@@ -14,7 +14,12 @@
   <% end %>
 
 
+
+
  <p><%= link_to "#{favorite.post.post_comments.count} コメント", post_path(favorite.post.id) %></p>
  <p><%= render 'posts/tag_list', tag_list: favorite.post.tag_list %></p>
 
-  <% end %>
+<% end %>
+<% else %>
+<h1>ない</h1>
+<% end %>

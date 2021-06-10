@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get '/about' => 'homes#about'
   get '/mypage' => 'homes#mypage'
   get 'posts/top' => 'posts#top'
-  get 'posts/:id/favorite' => 'posts#favorite', as: 'favorite'
+  get 'posts/favorite' => 'posts#favorite', as: 'favorite'
  # 退会確認画面
   get '/users/:id/unsubscribe' => 'users#unsubscribe', as: 'unsubscribe'
   # 論理削除用のルーティング

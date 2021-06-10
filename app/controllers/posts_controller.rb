@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  
+
   def new
     @post = Post.new
   end
@@ -46,11 +46,11 @@ class PostsController < ApplicationController
     # 3つまでお気に入りの多い順に記事を表示
     @all_ranks = Post.find(Favorite.group(:post_id).order('count(post_id) desc').limit(3).pluck(:post_id))
   end
-  
+
   def favorite
     @favorites = Favorite.where(user_id: current_user.id)
   end
-  
+
    # 投稿データのストロングパラメータ
   private
 
