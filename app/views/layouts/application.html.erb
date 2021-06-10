@@ -21,7 +21,7 @@
          <%= link_to '人気記事', posts_top_path %>
        </li>
        <li>
-         <%= link_to "いいね一覧", favorite_path(current_user.id) %>
+         <%= link_to "いいね一覧", favorite_path %>
        </li>
        <li>
          <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
