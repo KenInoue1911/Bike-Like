@@ -69,4 +69,7 @@ gem "refile-mini_magick"
 gem 'kaminari','~> 1.2.1'
 gem 'ransack'
 gem 'acts-as-taggable-on','~> 7.0'
+gem 'bootstrap', '~> 4.5'
 gem 'jquery-rails'
+gem 'font-awesome-sass', '~> 5.13'
+gem 'jquery-turbolinks'

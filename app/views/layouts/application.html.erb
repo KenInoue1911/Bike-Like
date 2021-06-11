@@ -1,48 +1,17 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Bike</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
-
-  <body>
-     <% if user_signed_in? %>
-       <li>
-         <%= link_to "投稿一覧", posts_path %>
-       </li>
-       <li>
-         <%= link_to '投稿フォーム', new_post_path %>
-       </li>
-       <li>
-         <%= link_to '人気記事', posts_top_path %>
-       </li>
-       <li>
-         <%= link_to "いいね一覧", favorite_path %>
-       </li>
-       <li>
-         <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-       </li>
-       <li>
-         <%= link_to 'マイページ', user_path(current_user.id) %>
-       </li>
-       <li>
-         <%= link_to "ユーザー一覧", users_path %>
-       </li>
-       <li>
-         <%= link_to "チャットルーム一覧", rooms_path(current_user) %>
-       </li>
-    <% else %>
-      <li>
-        <%= link_to "新規登録", new_user_registration_path %>
-      </li>
-      <li>
-        <%= link_to "ログイン", new_user_session_path %>
-      </li>
-    <% end %>
-    <%= yield %>
-  </body>
+   <head>
+     <title>Bike&Like</title>
+      <%= csrf_meta_tags %>
+      <%= csp_meta_tag %>
+      <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+      <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    </head>
+    <header>
+      <%= render 'layouts/header' %>
+    </header>
+    <footer>
+      
+    </footer>
 </html>
+<%= yield %>
