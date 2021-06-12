@@ -26,3 +26,24 @@ $(function() {
     $('#sp-menu').fadeToggle();
   });
 });
+
+$(function() {
+    $('.blog-area1').slick({
+        autoplay: true,
+        autoplaySpeed: 4000,
+    });
+});
+
+$(function() {
+    $('.blog-area2').slick({
+        autoplay: true,
+        autoplaySpeed: 5000,
+    });
+});
+
+$(function() {
+    $('.blog-area3').slick({
+        autoplay: true,
+        autoplaySpeed: 6000,
+    });
+});
