@@ -16,9 +16,24 @@
 @import "bootstrap";
 @import 'font-awesome-sprockets';
 @import 'font-awesome';
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
 * {
+  margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+.header {
+  width: 100%;
+  padding: 10px 0;
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+  // フォント使用
+  font-family: 'Lobster', cursive;
+  // ヘッダー固定
+  position: fixed;
+  background-color: black;
 }
 /* ---- ハンバーガーアイコン ---- */
 
@@ -44,7 +59,7 @@
   left: 0;
   width: 100%;
   height: 4px;
-  background-color: #000;
+  background-color: white;
   border-radius: 4px;
 }
 .menu-trigger span:nth-child(1) {
@@ -59,7 +74,7 @@
 .menu-trigger.active span:nth-child(1) {
   -webkit-transform: translateY(20px) rotate(-45deg);
   transform: translateY(20px) rotate(-45deg);
-  background-color: #fff;
+  background-color: white;
 }
 .menu-trigger.active span:nth-child(2) {
   opacity: 0;
@@ -67,7 +82,7 @@
 .menu-trigger.active span:nth-child(3) {
   -webkit-transform: translateY(-20px) rotate(45deg);
   transform: translateY(-20px) rotate(45deg);
-  background-color: #fff;
+  background-color: white;
 }
 /* ------ spメニュー ------ */
 #sp-menu {
@@ -75,7 +90,7 @@
   top: 0;
   left: 0;
   background: #000;
-  color: #fff;
+  color: white;
   width: 100%;
   min-height: 100%;
   display: none;
@@ -87,8 +102,21 @@
   margin-bottom: 30px;
 }
 #sp-menu a {
-  color: #fff;
+  color: white;
   text-decoration: none;
   font-weight: bold;
 }
+#sp-menu h2 {
+  font-family: 'Lobster', cursive;
+}
+
+footer {
+  color: #fff;
+  width: 100%;
+  height: 120px;
+  text-align: center;
+  line-height: 120px;
+  background-color: #848282;
+}
+
 
