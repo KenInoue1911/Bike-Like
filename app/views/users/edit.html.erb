@@ -1,5 +1,13 @@
 <h2>プロフィール編集</h2>
 <%= form_with model:@user, local:true do |f| %>
+   <% if @user.avater? %>
+      <%= image_tag @user.avater.thumb.url %>
+   <% else %>
+      <%= image_tag "/assets/default.jpg", :size => '100x100' %>
+   <% end %>
+         <button type="button" class="btn btn-outline-secondary rounded-pill">
+         <%= f.file_field :avater, accept: 'image/jpeg,image/gif,image/png' %>
+      </button>
   <div class="field">
     <%= f.label :名前（必須） %><br />
     <%= f.text_field :name, autofocus: true, autocomplete: "name" %>

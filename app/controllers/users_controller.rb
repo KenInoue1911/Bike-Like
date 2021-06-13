@@ -47,20 +47,24 @@ class UsersController < ApplicationController
 
   # 退会画面
   def unsubscribe
-    @user = User
+    if @user.email == 'guest@example.com'
+      redirect_to root_path, alert: 'ゲストユーザーは削除できません。'
+    else
+     @user = User
+    end
   end
 
   # 退会機能
   def withdrawal
-    @user = User.find(params[:id])
-    @user.update(is_deleted: false)
-    reset_session
-    redirect_to root_path
+     @user = User.find(params[:id])
+     @user.update(is_deleted: false)
+     reset_session
+     redirect_to root_path
   end
 
   private
 
   def user_params
-    params.require(:user).permit(:name, :age, :gender, :profile, :bike, :is_deleted)
+    params.require(:user).permit(:name, :age, :gender, :profile, :bike, :is_deleted, :avater)
   end
 end

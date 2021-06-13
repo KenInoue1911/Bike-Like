@@ -20,12 +20,29 @@
         <div class="blog-slide"><img class="blog-image1" src="/assets/bike03.jpg"></div>
         <div class="blog-slide"><img class="blog-image1" src="/assets/bike003.jpg"></div>
       </div>
-
-
-
-
     </div>
     <div class="sidebar">
-      <h1>aaaa</h1>
+      <h1 class="sidebar-text">
+        ようこそ！Bike＆Likeへ！
+      </h1>
+      <h4 class="sidebar-main">
+        あなたはどんなバイクが好みですか？</br>
+        かっこいい塗装や、かっこいいカスタム。</br>
+        おしゃれな風景を投稿してライバルに自慢しよう！！
+      </h4>
+      <h4 class="login">
+        <i class="fas fa-sign-in-alt"></i>
+        <%= link_to "ログイン", new_user_session_path %>
+      </h4>
+      <h4 class="signup">
+        <i class="fas fa-user-plus"></i>
+        <%= link_to "新規登録", new_user_registration_path %>
+      </h4>
+      <h4 class="guest">
+         <i class="fas fa-user-tie"></i>
+        <%= link_to 'ゲストログイン', homes_guest_sign_in_path, method: :post %>
+      </h4>
+      <div class="blog-image2"></div>
+     </div>
     </div>
 </div>

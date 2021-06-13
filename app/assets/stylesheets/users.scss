@@ -1,3 +1,65 @@
-// Place all the styles related to the users controller here.
+/*
+// Place all the styles related to the homes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+*= require_tree .
+*= require_self
+*/
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+// サインアップ
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main-visual-user {
+  width: 100%;
+  height: 760px;
+  display: flex;
+  position: relative;
+}
+.main-title {
+  font-family: 'Lobster', cursive;
+  top: 20px;
+  right: 47%;
+  position: absolute;
+
+}
+#new_user {
+  margin-left: 43%;
+  margin-top: 93px;
+}
+.field01 {
+  padding: 10px 15px; /*ボックスを大きくする*/
+  font-size: 16px;
+  border: 2px solid #ddd; /*枠線*/
+}
+.actions {
+  margin-left: -2px;
+}
+.signup-btn {
+  padding: 0.5em;
+  border-radius: 0.5em;
+  margin-left: 0%;
+  margin-top: 20px;
+}
+.signin-btn {
+  padding: 0.5em;
+  border-radius: 0.5em;
+  background-color: lightgray;
+  color: black;
+}
+
+// サインイン
+.main-visual-user-signin {
+  width: 100%;
+  height: 415px;
+  display: flex;
+  position: relative;
+}
+form {
+  margin-left: 43%;
+  margin-top: 93px;
+}
