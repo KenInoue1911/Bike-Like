@@ -74,6 +74,8 @@ gem 'jquery-rails'
 gem 'font-awesome-sass', '~> 5.13'
 gem 'jquery-turbolinks'
 gem 'dotenv-rails'
+gem 'carrierwave'
+gem 'mini_magick'
 group :production do
 gem 'mysql2'
 end

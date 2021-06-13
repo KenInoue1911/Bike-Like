@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get '/mypage' => 'homes#mypage'
   get 'posts/top' => 'posts#top'
   get 'posts/favorite' => 'posts#favorite', as: 'favorite'
+   post '/homes/guest_sign_in', to: 'homes#guest_sign_in'
  # 退会確認画面
   get '/users/:id/unsubscribe' => 'users#unsubscribe', as: 'unsubscribe'
   # 論理削除用のルーティング

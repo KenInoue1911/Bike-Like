@@ -1,26 +1,35 @@
-<h2>ログイン</h2>
+<div class="main-visual-user-signin">
+   <h1 class="main-title">
+     SIGNIN
+   </h1>
 
 <%= form_with model: @user, url: user_session_path, local: true do |f| %>
-  <div class="field">
+  <div class="field01">
     <%= f.label :メールアドレス %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", size: 40 %>
   </div>
 
-  <div class="field">
+  <div class="field01">
     <%= f.label :パスワード %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
+    <%= f.password_field :password, autocomplete: "current-password", size: 20 %>
   </div>
 
   <% if devise_mapping.rememberable? %>
-    <div class="field">
+    <div class="field01">
       <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+      <%= f.label :自動ログイン %>
     </div>
   <% end %>
 
   <div class="actions">
-    <%= f.submit "Log in" %>
+    <%= f.submit "ログイン", class: 'signup-btn'  %>
+    <i class="fas fa-sign-in-alt"></i>
+    初めての方
+    <%= link_to "新規登録", new_user_registration_path, class: "signin-btn" %>
+     <i class="fas fa-user-plus"></i>
+
   </div>
 <% end %>
+</div>
 
-<%= render "devise/shared/links" %>
+
