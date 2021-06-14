@@ -20,9 +20,9 @@ test:
   <<: *default
   database: db/test.sqlite3
 
-  production:
+production:
   <<: *default
-  database: <%= ENV['BikeLike'] %>
+  database: <%= ENV['Bike-Like'] %>
   adapter: mysql2
   encoding: utf8mb4
   charset: utf8mb4
