@@ -38,6 +38,7 @@ header {
   // ヘッダー固定
   position: fixed;
   background-color: black;
+  z-index: 1;
 }
 /* ---- ハンバーガーアイコン ---- */
 
@@ -45,7 +46,7 @@ header {
   position: fixed;
   right: 20px;
   top: 20px;
-  z-index: 10;
+  z-index: 4;
 }
 .menu-trigger,
 .menu-trigger span {
@@ -98,7 +99,7 @@ header {
   width: 100%;
   min-height: 100%;
   display: none;
-  z-index: 9;
+  z-index: 3;
   font-size: 3ex;
 }
 #sp-menu li {

@@ -1,3 +1,153 @@
-// Place all the styles related to the Posts controller here.
+/*
+// Place all the styles related to the homes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+*= require_tree .
+*= require_self
+*/
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+// 投稿一覧
+ h1.index-title {
+    text-align: center;
+    height: 0px;
+    font-family: 'Lobster', cursive;
+ }
+
+.post_search {
+    margin-left: 2%;
+    margin-top: 80px;
+}
+
+.photo-card {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  display: inline-block;
+  flex-direction: column;
+  width: 100%;
+  max-width: 500px;
+  margin-left: 70px;
+  margin-bottom: 70px;
+  margin-top: 40px;
+  vertical-align: top
+}
+
+.photo-background {
+  background-position: center;
+  background-size: cover;
+  min-height: 250px;
+}
+
+.image-size {
+    width: 500px;
+    height: 300px;
+
+}
+.photo-author {
+  margin-left: 17%;
+  font-size: small;
+}
+
+.photo-author p {
+  margin-top: 40px;
+  margin-bottom: 1rem;
+  font-size: large;
+}
+
+.photo-details {
+  padding: 2.1875em 5%;
+  position: relative;
+}
+
+.photo-user-icon {
+  position: absolute;
+  bottom: 250px;
+  border-radius: 80%;
+  left: 2px;
+}
+
+.photo-details h3 {
+  text-align: center;
+}
+
+
+.photo-meta {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.375em;
+}
+
+.photo-bike {
+  width: 43%;
+}
+
+.reaction {
+  width: 40%;
+}
+.reaction li {
+  float: left;
+  list-style: none;
+}
+
+.photo-tags {
+  width: 450px;
+  height: 100px;
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 87.5%;
+    margin-top: 0.35em;
+    text-transform: lowercase;
+  }
+
+  li {
+    margin: 0 0.35em 0.35em 0;
+    float: left;
+  }
+
+  a {
+    border-radius: 50px;
+    display: block;
+    padding: 0.3125em 1.25em;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+}
+
+// 新規投稿
+ h1.post-new-title {
+    text-align: center;
+    height: 0px;
+    font-family: 'Lobster', cursive;
+ }
+
+ .field01 {
+  padding: 10px 15px; /*ボックスを大きくする*/
+  font-size: 16px;
+  border: 2px solid #ddd; /*枠線*/
+  width: 40%;
+  margin-left: -70px;
+}
+
+.post-btn {
+    padding: 0.5em;
+  border-radius: 0.5em;
+  margin-left: 0%;
+  margin-top: 20px;
+  width: 200px;
+  font-family: 'Lobster', cursive;
+}
+
+// ランキングページ
+ h1.post-top {
+    text-align: center;
+    height: 70px;
+    font-family: 'Lobster', cursive;
+ }
+
+ //お気に入りページ
+ .favorite-top {
+    text-align: center;
+    height: 70px;
+    font-family: 'Lobster', cursive;
+ }
