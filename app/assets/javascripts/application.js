@@ -11,7 +11,6 @@
 // about supported directives.
 //= require jquery
 //= require jquery_ujs
-//
 //= require jquery3
 //= require popper
 //= require bootstrap-sprockets
@@ -19,6 +18,8 @@
 //= require activestorage
 //= require jquery.turbolinks
 //= require_tree .
+
+// document.addEventListener("turbolinks:load", function(){
 
 $(function() {
   $('.menu-trigger').on('click', function(event) {
@@ -47,3 +48,5 @@ $(function() {
         autoplaySpeed: 6000,
     });
 });
+
+// });

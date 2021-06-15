@@ -1,14 +1,33 @@
-<h1>投稿フォーム</h1>
+<h1 class="post-new-title">
+  NEW BIKE
+</h1>
+
 <%= form_with model: @post, local:true do |f| %>
-  <h4>画像</h4>
+<div class="field01">
+  <%= f.label :画像 %></br>
   <%= f.attachment_field :image %>
-  <h4>バイク名</h4>
-  <%= f.text_field :post_bike %>
-  <h4>タイトル</h4>
-  <%= f.text_field :title %>
-  <h4>説明</h4>
-  <%= f.text_area :post_profile %>
-  <h4><%= f.label :タグ %></h4>
+</div>
+
+<div class="field01">
+   <%= f.label :バイク名 %></br>
+   <%= f.text_field :post_bike %>
+</div>
+
+<div class="field01">
+   <%= f.label :タイトル %></br>
+<%= f.text_field :title %>
+  </div>
+  <div class="field01">
+  <%= f.label :説明 %></br>
+  <%= f.text_area :post_profile, size: "40x5" %>
+  </div>
+  <div class="field01">
+  <%= f.label :タグ %></br>
   <%= f.text_field :tag_list, value: @post.tag_list %>
-  <%= f.submit '投稿' %>
+  </div>
+  <p>
+    <i class="fas fa-motorcycle"></i>
+  <%= f.submit 'GO!!!', class: 'post-btn' %>
+  <i class="fas fa-motorcycle"></i>
+  </p>
 <% end %>
