@@ -47,11 +47,8 @@ class UsersController < ApplicationController
 
   # 退会画面
   def unsubscribe
-    if @user.email == 'guest@example.com'
-      redirect_to root_path, alert: 'ゲストユーザーは削除できません。'
-    else
+  
      @user = User
-    end
   end
 
   # 退会機能

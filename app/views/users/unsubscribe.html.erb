@@ -1,2 +1,16 @@
- <%= link_to "退会する", withdrawal_path, method: :patch, data: { confilm: "本当に退会しますか？" } %>
+<h1 class="user-draw-title">
+  DISCHARGE
+</h1>
+<h2 class="user-draw-text">
+  退会すると投稿内容はすべて削除され</br>
+  アカウントを二度と戻せなくなります。
+  </h2>
+ <div class="user-draw">
+  <i class="fas fa-door-open"></i>
+  <%= link_to "退会する", withdrawal_path, method: :patch, data: { confilm: "本当に退会しますか？" } %>
+ </div>
+ <div class="user-undraw">
+  <i class="fas fa-door-closed"></i>
   <%= link_to "退会しない", user_path(current_user) %>
+ </div>
+</div>

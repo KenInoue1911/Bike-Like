@@ -6,6 +6,7 @@
 *= require_self
 */
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
 
 // サインアップ
 * {
@@ -64,3 +65,200 @@ form {
   margin-top: 93px;
 }
 
+//ユーザー詳細画面
+.show-user-title {
+  text-align: center;
+  height: 0px;
+  font-family: 'Lobster', cursive;
+}
+
+.user-card {
+    width: 100%;
+    margin: 5% 0% 3%;
+    vertical-align: top;
+
+}
+
+.user-image {
+    margin-left: 35%;
+    margin-top: 6%;
+    width: 6%;
+}
+
+p.user-name {
+    margin-left: 45%;
+    margin-top: -9%;
+}
+
+p.user-age {
+    margin-left: 45%;
+}
+p.user-gender {
+    margin-left: 45%;
+}
+
+p.user-bike {
+    margin-left: 45%;
+}
+
+.user-text {
+    margin-left: 45%;
+}
+
+p.user-follow {
+    margin-left: 35%;
+}
+.follow-follower {
+   margin-left: 35%;
+    background: gray;
+    padding: 0.5em;
+    width: 8%;
+    border-radius: 0.5em;
+    margin-top: 3%;
+
+    a {
+  color: white ;
+  }
+}
+.chat-link {
+  margin-left: 35%;
+    background: gray;
+    padding: 0.5em;
+    width: 7%;
+    border-radius: 0.5em;
+    margin-top: 1%;
+
+  a {
+  color: white ;
+  }
+}
+p.user-delete-btn {
+    margin-left: 35%;
+    background: gray;
+    padding: 0.5em;
+    width: 6%;
+    border-radius: 0.5em;
+
+     a {
+  color: white ;
+  }
+}
+p.user-pofile-btn {
+    margin-left: 35%;
+    background: gray;
+    padding: 0.5em;
+    width: 9%;
+    border-radius: 0.5em;
+
+     a {
+  color: white ;
+  }
+}
+.user-btn-link {
+    text-decoration: none;
+    color: white ;
+}
+.follow-number {
+ font-family: 'Parisienne', cursive;
+ text-decoration: none;
+ color: blue;
+}
+.user-follow-btn {
+  text-decoration: none;
+  color: white ;
+}
+.user-chat {
+    margin-top: -5%;
+}
+.user-chat-start {
+    margin-left: -14%;
+    background: gray;
+    padding: 0.5em;
+    width: 16%;
+    border-radius: 0.5em;
+    color : white;
+    margin-top: -1%;
+}
+
+//ユーザー一覧
+.user_search {
+    margin-left: 2%;
+    margin-top: 80px;
+}
+.index-user-card {
+    display: inline-block;
+    flex-direction: column;
+    width: 100%;
+    max-width: 220px;
+    margin-left: 70px;
+    margin-bottom: 70px;
+    height: 162px;
+    margin-top: 40px;
+    vertical-align: top;
+
+}
+.index-user-box {
+    padding: 20px 20px 10px 13px;
+    border-bottom: solid 6px black;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+    border-radius: 9px;
+}
+.index-user-avater {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.index-user-font {
+  color: gray;
+}
+.index-user-name {
+  text-align: center;
+}
+.index-user-bike {
+  text-align: center;
+}
+
+//ユーザー編集ページ
+.user-edit-main {
+  position: relative;
+}
+.user-edit-card {
+  position: absolute;
+  top: 120px;
+  left: 260px;
+}
+// ユーザー退会ページ
+.user-draw-title {
+  text-align: center;
+  height: 0px;
+  font-family: 'Lobster', cursive;
+}
+.user-draw-text {
+    text-align: center;
+    margin-top: 200px;
+}
+.user-draw {
+    margin-left: 35%;
+    background: gray;
+    padding: 0.5em;
+    width: 6%;
+    border-radius: 0.5em;
+    margin-top: 4%;
+    margin-bottom: 80px;
+
+    a {
+  color: gold;
+  }
+}
+.user-undraw {
+    margin-left: 57%;
+    background: gray;
+    padding: 0.5em;
+    width: 7%;
+    border-radius: 0.5em;
+    margin-top: -6%;
+    margin-bottom: 150px;
+
+        a {
+  color: white;
+  }
+}

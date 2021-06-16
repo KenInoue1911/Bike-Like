@@ -1,8 +1,10 @@
-<h1>フォロー一覧</h1>
+<h1 class="show-user-title">
+   FOLLOW
+</h1>
 
       <!-- フォローしている時としていない時の表示 -->
       <% if @users.empty? %>
         <h3>ユーザはいません</h3>
       <% else %>
-        <%= render 'relationships/index', users: @users %>
+        <%= render 'users/user_form', users: @users %>
       <% end %>
