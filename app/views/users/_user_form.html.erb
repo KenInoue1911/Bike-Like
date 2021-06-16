@@ -1,0 +1,21 @@
+<% users.each do |user| %>
+<div class="index-user-card">
+  <div class="index-user-box">
+   <div class="index-user-avater">
+       <% if user.avater? %>
+          <%= image_tag user.avater.thumb.url %>
+       <% else %>
+          <%= image_tag "/assets/default.jpg", :size => '70x70' %>
+       <% end %>
+     </div>
+     <div class="index-user-name">
+        <%= link_to user_path(user.id), class: "index-user-font" do %>
+        <i class="fas fa-user"></i><%= user.name %>
+     </div>
+     <div class="index-user-bike">
+       <i class="fas fa-motorcycle"></i><%= user.bike %>
+     </div>
+  </div>
+</div>
+  <% end %>
+    <% end %>

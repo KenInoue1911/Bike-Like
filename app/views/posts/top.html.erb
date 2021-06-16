@@ -16,18 +16,20 @@
       <%= image_tag "/assets/default.jpg", :size => '70x70' %>
       <% end %>
  </div>
-  <h3><%= post.title %></h3>
+  <h3 class="photo-title">
+    <%= post.title.truncate(13) %>
+  </h3>
   <span class="photo-author">
     By<%= link_to user_path(post.user) do %>
      <%= post.user.name %></span>
      <% end %>
       <p class="photo-text">
-        <%= post.post_profile %>
+        <%= post.post_profile.truncate(88) %>
       </p>
   </span>
   <div class="photo-meta">
     <div class="photo-bike">
-     <h6><%= post.post_bike %></h6>
+     <h6><%= post.post_bike.truncate(10) %></h6>
     </div>
     <div class="reaction">
      <h6>リアクション</h6>

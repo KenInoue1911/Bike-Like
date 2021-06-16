@@ -1,18 +1,15 @@
-<h1>ユーザー一覧</h1>
-<!----検索機能-->
-<%= search_form_for @q do |f| %>
-<%= f.label :name, "ユーザー名検索" %>
-<%= f.search_field :name_cont %>
-<%= f.label :bike, "バイク名で検索" %>
-<%= f.search_field :bike_cont %>
+<h1 class="show-user-title">
+   USERS
+</h1>
+<div class="user-search">
+    <!----検索機能-->
+    <%= search_form_for @q do |f| %>
+    <%= f.label :name, "ユーザー名検索" %>
+    <%= f.search_field :name_cont %>
+    <%= f.label :bike, "バイク名で検索" %>
+    <%= f.search_field :bike_cont %>
+    <%= f.submit "検索" %>
+    <% end %>
+</div>
 
-
-<%= f.submit "検索" %>
-
-<% end %>
-<% @users.each do |user| %>
-<%= link_to user_path(user.id) do %>
-<p> 名前: <%= user.name %></p>
-<p>好きなバイク: <%= user.bike %></p>
-<% end %>
-<% end %>
+<%= render 'users/user_form', users: @users %>
