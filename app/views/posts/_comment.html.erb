@@ -1,12 +1,30 @@
 <% @post.post_comments.each do |post_comment| %>
-  <p>ユーザーネーム: 
-  <%= link_to user_path(post_comment.user) do %>
-  <%= post_comment.user.name %></p>
-  <% end %>
-  <p>コメント日時：<%= post_comment.created_at.strftime('%Y/%m/%d') %></p>
-  <p>コメント内容 : <%= post_comment.comment %></p>
-  <% if post_comment.user == current_user %>
-    <%= link_to "コメントを削除", post_post_comment_path(post_comment.post, post_comment), remote: :true,  method: :delete %>
-  <% end %>
+<div class="comment-card">
+    <div class="comment-user-name">
+        <%= link_to user_path(post_comment.user) do %>
+        <%= post_comment.user.name %>
+        <% end %>
+    </div>
+    <div class="comment-user-avater">
+        <% if @post.user.avater? %>
+        <%= image_tag user.avater.thumb.url %>
+        <% else %>
+        <%= image_tag "/assets/default.jpg", :size => '100x100' %>
+        <% end %>
+    </div>
+    <div class="comment-day">
+        <%= post_comment.created_at.strftime('%Y/%m/%d') %>
+    </div>
+    <% if post_comment.user == current_user %>
+    <div class="comment-delete">
+        <i class="fas fa-backspace"></i>
+        <%= link_to "コメントを削除", post_post_comment_path(post_comment.post, post_comment), remote: :true,  method: :delete %>
+    </div>
+    <% end %>
+    <div class="comment-text">
+        <%= post_comment.comment %>
+    </div>
+</div>
+
 <% end %>
 

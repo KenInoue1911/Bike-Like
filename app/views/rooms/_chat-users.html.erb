@@ -1,10 +1,9 @@
-<table>
-  <% entries.each do |entry| %>
-    <tr>
-      <h5><strong><a href="/users/<%= entry.user.id %>"><%= entry.user.name %>さん</a></strong></h5>
-    </tr>
-    <tr>
-      <h5>　</h5>
-    </tr>
-  <% end %>
-</table>
+<% entries.each do |entry| %>
+   <div class="show-chat-name">
+
+        <a href="/users/<%= entry.user.id %>"></a>
+     <div class="show-chat-yourname">
+        <p><%= entry.user.name %>さん</p>
+     </div>
+   </div>
+<% end %>

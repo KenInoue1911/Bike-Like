@@ -25,7 +25,7 @@
   flex-direction: column;
   width: 100%;
   max-width: 500px;
-  margin-left: 70px;
+  margin-left: 100px;
   margin-bottom: 70px;
   margin-top: 40px;
   vertical-align: top;
@@ -155,3 +155,118 @@
     height: 70px;
     font-family: 'Lobster', cursive;
  }
+
+ //投稿詳細ページ
+ .show-title {
+   text-align: center;
+   height: 60px;
+   font-family: 'Lobster', cursive;
+ }
+ .show-main {
+   width: 100%;
+   height: 100%;
+   float: left;
+ }
+ .show-photo {
+   width: 45%;
+   float: left;
+ }
+ .show-user-photo {
+    height: 720px;
+    width: 100%;
+ }
+ .show-area {
+   width: 50%;
+   float: left;
+ }
+ .show-user-avater {
+    margin-top: 20px;
+    text-align: center;
+}
+.show-title-photo {
+    text-align: center;
+    font-size: 35px;
+    margin-top: 20px;
+}
+.show-bike {
+    margin-left: 15px;
+    margin-top: 15px;
+    font-size: 21px;
+}
+
+a {
+    text-decoration: none;
+    color: gray;
+}
+
+.show-user-name {
+    margin-left: 17px;
+    font-size: 15px;
+}
+.show-text {
+    margin-left: 65px;
+    margin-top: 25px;
+    max-height: 131px;
+    height: 100%;
+    margin-bottom: 40px;
+    width: 85%;
+}
+
+.show-tags {
+    margin-left: 15px;
+    margin-bottom: 90px;
+}
+.show-user-day {
+    width: 10%;
+}
+.show-favorite {
+    width: 10%;
+    margin-left: 20%;
+    margin-top: -22px;
+}
+.show-edit-btn {
+    width: 10%;
+    margin-left: 55%;
+    margin-top: -21px;
+    background: gray;
+    padding: 2px;
+    border-radius: 0.5em;
+  a {
+    color: white;
+  }
+}
+.show-delete-btn {
+    width: 10%;
+    margin-top: -25px;
+    margin-left: 80%;
+    background: gray;
+    padding: 2px;
+    border-radius: 0.5em;
+
+  a {
+    color: gold;
+  }
+}
+
+.post_comment {
+    width: 100%;
+}
+
+.show-area-card {
+    padding: 0.5em 1em;
+    background: white;
+    border-bottom: black;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+    border-radius: 9px;
+    margin-left: 8%;
+    height: 720px;
+}
+
+.show-comment-area {
+    margin-left: -190px;
+}
+input.comment-push-btn {
+    margin-left: 110px;
+}
+
+

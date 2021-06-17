@@ -40,3 +40,37 @@
 .index-chat-font {
   color: gray;
 }
+//チャットルーム
+.show-chat-title {
+   text-align: center;
+   eight: 0px;
+   font-family: 'Lobster', cursive;
+}
+.chat-icon-my {
+    margin-left: -10%;
+    margin-top: -3%;
+    margin-bottom: 6%;
+    width: 7%;
+}
+
+.balloon-right {
+    width: 45%;
+    max-height: 120px;
+    margin-left: 130px;
+    height: 120px;
+}
+
+.left-message {
+    height: 120px;
+}
+.chat-icon {
+    margin-left: 91%;
+    /* margin-bottom: 6%; */
+    /* width: 7%; */
+}
+
+.balloon-left {
+    text-align: right;
+    margin-top: -62px;
+    width: 90%;
+}

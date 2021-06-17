@@ -1,33 +1,15 @@
-<div class="container">
-  <div class="row">
-    <div class="col-sm-12">
-      <h1 class="heading">チャットルーム</h1>
-
-      <!-- チャット部屋のユーザを表示 -->
-      <div class="chat-users">
-        <%= render 'rooms/chat-users', entries: @entries %>
-      </div>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="chat-background col-sm-12 mx-auto">
-
-      <!-- メッセージを表示 -->
-      <div class="chat-messages">
+<h1 class="show-chat-title">
+   CHAT
+</h1>
+<div class="show-chat-main">
+    <div class="chat-messages">
         <%= render 'messages/messages', messages: @messages %>
-      </div>
-
-      <!-- メッセージ送信フォーム -->
-      <div class="message-form">
-        <%= render 'messages/message-form', message: @message %>
-      </div>
     </div>
-  </div>
-
-  <div class="row">
-    <div class="top-link col-sm-12 mx-auto text-center">
-      <%= link_to 'チャットルーム一覧へ戻る', rooms_path(current_user), class: "btn btn-secondary" %>
-    </div>
-  </div>
 </div>
+<div class="message-form">
+    <%= render 'messages/message-form', message: @message %>
+</div>
+<div class="back-chat-room">
+    <%= link_to 'チャットルーム一覧へ戻る', rooms_path(current_user) %>
+</div>
+  
