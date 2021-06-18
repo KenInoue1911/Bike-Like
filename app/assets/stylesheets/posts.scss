@@ -250,6 +250,7 @@ a {
 
 .post_comment {
     width: 100%;
+    margin-left: -40%;
 }
 
 .show-area-card {
@@ -260,10 +261,11 @@ a {
     border-radius: 9px;
     margin-left: 8%;
     height: 720px;
+
 }
 
 .show-comment-area {
-    margin-left: -190px;
+    margin-left: -85%;
 }
 input.comment-push-btn {
     margin-left: 110px;

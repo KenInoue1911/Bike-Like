@@ -47,7 +47,6 @@ class UsersController < ApplicationController
 
   # 退会画面
   def unsubscribe
-  
      @user = User
   end
 
