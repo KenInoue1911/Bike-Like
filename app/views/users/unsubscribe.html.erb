@@ -5,6 +5,9 @@
   退会すると投稿内容はすべて削除され</br>
   アカウントを二度と戻せなくなります。
   </h2>
+  <% if current_user.name == "ゲストユーザー" %>
+  <h2>　　　　　　　　　　　　　　　　　　　　　　　　　　　退会できません</h2>
+  <% else %>
  <div class="user-draw">
   <i class="fas fa-door-open"></i>
   <%= link_to "退会する", withdrawal_path, method: :patch, data: { confilm: "本当に退会しますか？" } %>
@@ -14,3 +17,4 @@
   <%= link_to "退会しない", user_path(current_user) %>
  </div>
 </div>
+<% end %>
