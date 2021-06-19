@@ -2,6 +2,12 @@ class AvaterUploader < CarrierWave::Uploader::Base
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
   include CarrierWave::MiniMagick
+  version :thumb do
+    process resize_to_fit: [600, 70]
+  end
+  version :thumb50 do
+    process resize_to_fit: [70, 70]
+  end
 
   # Choose what kind of storage to use for this uploader:
   storage :file
@@ -44,10 +50,5 @@ class AvaterUploader < CarrierWave::Uploader::Base
   # def filename
   #   "something.jpg" if original_filename
   # end
-  version :thumb do 
-   process resize_to_fit: [200, 200] 
- end 
-version :thumb50 do 
-  process resize_to_fit: [100, 100] 
- end 
+
 end

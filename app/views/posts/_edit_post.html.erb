@@ -1,0 +1,29 @@
+<%= form_with model: @post, local:true do |f| %>
+<div class="field01">
+  <%= f.label :画像 %></br>
+  <%= f.attachment_field :image %>
+</div>
+
+<div class="field01">
+   <%= f.label :バイク名 %></br>
+   <%= f.text_field :post_bike %>
+</div>
+
+<div class="field01">
+   <%= f.label :タイトル %></br>
+<%= f.text_field :title, size: "40x5" %>
+  </div>
+  <div class="field01">
+  <%= f.label :説明 %></br>
+  <%= f.text_area :post_profile, size: "50x5" %>
+  </div>
+  <div class="field01">
+  <%= f.label :タグ %></br>
+  <%= f.text_area :tag_list, value: @post.tag_list, size: "50x2" %>
+  </div>
+  <p>
+    <i class="fas fa-motorcycle"></i>
+  <%= f.submit 'GO!!!', class: 'post-btn' %>
+  <i class="fas fa-motorcycle"></i>
+  </p>
+<% end %>

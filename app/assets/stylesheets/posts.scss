@@ -41,6 +41,11 @@
 .image-size {
     width: 500px;
     height: 300px;
+}
+.user-avater-post {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
 
 }
 .photo-author {
@@ -65,7 +70,7 @@
 }
 
 .photo-title {
-  margin-left: 14%;
+  margin-left: 17%;
   margin-top: 2%;
 }
 
@@ -269,6 +274,12 @@ a {
 }
 input.comment-push-btn {
     margin-left: 110px;
+}
+
+.user-avater-postshow {
+   width: 200px;
+  height: 150px;
+  border-radius: 50%;
 }
 
 

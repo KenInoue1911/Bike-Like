@@ -1,3 +1,4 @@
-$('.right-message').append('<div class="balloon-right"><%= @message.message %></div>');
+$('.messages').append("<%= j(render "messages/message_right", message: @message ) %>");
+$('#chat_comment_area').val('');
 <!----どこに>　　　　　　　　--何を>
 console.log("ss3")

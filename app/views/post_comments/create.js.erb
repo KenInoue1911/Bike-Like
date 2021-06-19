@@ -1,2 +1,3 @@
 $(".post_comment").html("<%= j(render partial: "posts/comment", locals: {post: @post,post_comment: @post_comment}) %>");
+$(".show-comment").html("<%= j(render partial: "posts/comment_count", locals: {post: @post,post_comment: @post_comment}) %>");
 $('#post_comment_area').val('');

@@ -3,23 +3,14 @@
        <% messages.each do |message| %>
           <% if message.user.id == current_user.id %>
             <div class="right-message">
-              <div class="balloon-right">
-                <strong><%= message.message %></strong>
-                  <div class="chat-icon-my">
-                    <% if message.user.avater? %>
-                      <%= image_tag user.avater.thumb.url %>
-                    <% else %>
-                      <%= image_tag "/assets/default.jpg", :size => '70x70' %>
-                    <% end %>
-                  </div>
-              </div>
+              <%= render "messages/message_right", message: message %>
             </div>
          <% else %>
             <div class="left-message">
               <div class="chat-icon">
                 <%= link_to user_path(message.user) do %>
                   <% if message.user.avater? %>
-                    <%= image_tag user.avater.thumb.url %>
+                    <%= image_tag message.user.avater.thumb.url, class: "user-avater-post" %>
                   <% else %>
                     <%= image_tag "/assets/default.jpg", :size => '70x70' %>
                   <% end %>

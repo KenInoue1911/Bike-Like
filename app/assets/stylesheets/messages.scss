@@ -1,3 +1,23 @@
-// Place all the styles related to the messages controller here.
+/*
+// Place all the styles related to the homes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+*= require_tree .
+*= require_self
+*/
+
+
+.chat-text-area {
+    width: 49%;
+    margin-left: -20%;
+}
+
+.chat-submit {
+    width: 5%;
+    margin-left: 9%;
+}
+
+.back-chat-room {
+    text-align: center;
+    margin: 30px;
+}

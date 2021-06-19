@@ -2,32 +2,5 @@
   NEW BIKE
 </h1>
 
-<%= form_with model: @post, local:true do |f| %>
-<div class="field01">
-  <%= f.label :画像 %></br>
-  <%= f.attachment_field :image %>
-</div>
+<%= render 'posts/edit_post', post: @post %>
 
-<div class="field01">
-   <%= f.label :バイク名 %></br>
-   <%= f.text_field :post_bike %>
-</div>
-
-<div class="field01">
-   <%= f.label :タイトル %></br>
-<%= f.text_field :title %>
-  </div>
-  <div class="field01">
-  <%= f.label :説明 %></br>
-  <%= f.text_area :post_profile, size: "40x5" %>
-  </div>
-  <div class="field01">
-  <%= f.label :タグ %></br>
-  <%= f.text_field :tag_list, value: @post.tag_list %>
-  </div>
-  <p>
-    <i class="fas fa-motorcycle"></i>
-  <%= f.submit 'GO!!!', class: 'post-btn' %>
-  <i class="fas fa-motorcycle"></i>
-  </p>
-<% end %>

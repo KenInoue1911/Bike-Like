@@ -12,7 +12,7 @@
     <div class="photo-details">
     <div class="photo-user-icon">
       <% if favorite.user.avater? %>
-      <%= image_tag user.avater.thumb.url %>
+      <%= image_tag favorite.user.avater.thumb.url, class: "user-avater-post" %>
       <% else %>
       <%= image_tag "/assets/default.jpg", :size => '70x70' %>
       <% end %>
@@ -53,5 +53,5 @@
  </div>
  <% end %>
 <% else %>
-<h1>お気に入りはありません</h1>
+<h1>　　　　　　　　　　　　　　　　　　　お気に入りはありません</h1>
 <% end %>

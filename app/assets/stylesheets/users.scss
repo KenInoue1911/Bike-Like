@@ -84,6 +84,11 @@ form {
     margin-top: 6%;
     width: 6%;
 }
+.user-avater-usershow {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
 
 p.user-name {
     margin-left: 45%;
@@ -100,13 +105,17 @@ p.user-gender {
 p.user-bike {
     margin-left: 45%;
 }
-
 .user-text {
     margin-left: 45%;
+    width: 25%;
+    max-height: 200px;
+    height: 200px;
 }
 
-p.user-follow {
+.user-follow {
     margin-left: 35%;
+    margin-top: -130px;
+    width: 7%;
 }
 .follow-follower {
    margin-left: 35%;
@@ -147,7 +156,7 @@ p.user-pofile-btn {
     margin-left: 35%;
     background: gray;
     padding: 0.5em;
-    width: 9%;
+    width: 10%;
     border-radius: 0.5em;
 
      a {
@@ -161,7 +170,7 @@ p.user-pofile-btn {
 .follow-number {
  font-family: 'Parisienne', cursive;
  text-decoration: none;
- color: blue;
+ color: black;
 }
 .user-follow-btn {
   text-decoration: none;
@@ -225,6 +234,11 @@ p.user-pofile-btn {
   position: absolute;
   top: 120px;
   left: 260px;
+}
+.user-avater-useredit {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
 }
 // ユーザー退会ページ
 .user-draw-title {
