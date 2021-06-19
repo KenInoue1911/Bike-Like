@@ -4,7 +4,7 @@
 <div class="user-edit-main">
 <div class="user-edit-card">
  <% if @user.avater? %>
-      <%= image_tag @user.avater.thumb.url %>
+      <%= image_tag @user.avater.thumb.url, class: "user-avater-useredit" %>
    <% else %>
       <%= image_tag "/assets/default.jpg", :size => '250x250' %>
    <% end %>

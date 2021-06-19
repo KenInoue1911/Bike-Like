@@ -9,7 +9,7 @@
     <div class="show-area-card">
        <div class="show-user-avater">
          <% if @post.user.avater? %>
-         <%= image_tag user.avater.thumb.url %>
+         <%= image_tag @post.user.avater.thumb.url, class: "user-avater-postshow" %>
          <% else %>
          <%= image_tag "/assets/default.jpg", :size => '200x150' %>
          <% end %>
@@ -54,7 +54,7 @@
          <% end %>
        </div>
        <div class="show-comment">
-         コメント件数: <%= @post.post_comments.count %>
+         <%= render partial: 'posts/comment_count', locals: { post: @post,post_comment: @post_comment } %>
        </div>
    </div>
    <div class="post_comment">

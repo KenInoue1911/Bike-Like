@@ -8,7 +8,7 @@
  <div class="photo-details">
    <div class="photo-user-icon">
     <% if post.user.avater? %>
-      <%= image_tag user.avater.thumb.url %>
+      <%= image_tag post.user.avater.thumb.url, class: "user-avater-post" %>
    <% else %>
       <%= image_tag "/assets/default.jpg", :size => '70x70' %>
       <% end %>
@@ -34,12 +34,14 @@
      <ul>
       <li>
          <%= link_to "#{post.post_comments.count} コメント", post_path(post.id) %>
-          <div id="favorite_button_<%=post.id%>">
+
       </li>
       <li>
+       <div id="favorite_button_<%=post.id%>">
        <%= render partial: 'favorites/favorite-btn', locals: {post: post} %>
+       </div>
       </li>
-      </div>
+
 
      </ul>
     </div>

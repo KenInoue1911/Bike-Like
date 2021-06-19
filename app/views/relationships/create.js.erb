@@ -1,4 +1,4 @@
-$(".follow-count").html("<%= j(link_to @user.followers.count, user_followers_path(@user.id)) %>")
+$("#user-follow_<%= @user.id %>").html("<%= j(render 'relationships/follow_count', user: @user) %>");
 console.log("ss3")
 $(".follow_<%= @user.id %>").html("<%= j(render 'relationships/follow-btn', user: @user) %>");
 
