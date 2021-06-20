@@ -2,6 +2,7 @@
    <h1 class="main-title">
      SIGNUP
    </h1>
+   
 
 <%= form_with model: @user, url: user_registration_path, id: 'new_user', class: 'new_user', local: true do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
