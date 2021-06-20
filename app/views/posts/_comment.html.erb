@@ -1,3 +1,4 @@
+<% if @post_comments.present? %>
 <% @post.post_comments.each do |post_comment| %>
 <div class="comment-card">
     <div class="comment-user-name">
@@ -25,6 +26,11 @@
         <%= post_comment.comment %>
     </div>
 </div>
-
+<% end %>
+<div class="pagenate">
+<%= paginate @post_comments %>
+</div>
+<% else %>
+<p>コメントはありません</p>
 <% end %>
 

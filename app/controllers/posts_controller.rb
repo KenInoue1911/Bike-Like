@@ -14,7 +14,7 @@ class PostsController < ApplicationController
   def index
     # gem ransackによる検索機能
     @q = Post.ransack(params[:q])
-    @posts = @q.result(distinct: true)
+    @posts = @q.result.includes(:user).page(params[:page])
     # tag付け
     if params[:tag_name]
       @posts = Post.tagged_with("#{params[:tag_name]}")
@@ -24,7 +24,7 @@ class PostsController < ApplicationController
   def show
     @post = Post.find(params[:id])
     @post_comment = PostComment.new
-
+    @post_comments = PostComment.page(params[:page]).per(3)
   end
 
   def destroy
@@ -35,6 +35,10 @@ class PostsController < ApplicationController
 
   def edit
     @post = Post.find(params[:id])
+  if @post.user == current_user
+  else
+    redirect_to post_path(@post.id)
+  end
   end
 
   def update

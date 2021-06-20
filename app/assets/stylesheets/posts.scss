@@ -175,6 +175,7 @@
  .show-photo {
    width: 45%;
    float: left;
+   margin-left: 50px;
  }
  .show-user-photo {
     height: 720px;
@@ -270,7 +271,7 @@ a {
 }
 
 .show-comment-area {
-    margin-left: -85%;
+    margin-left: -95%;
 }
 input.comment-push-btn {
     margin-left: 110px;

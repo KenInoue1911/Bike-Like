@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+
   def show
     @user = User.find(params[:id])
     @posts = @user.posts
@@ -30,7 +31,11 @@ class UsersController < ApplicationController
   end
 
   def edit
-    @user = User.find(params[:id])
+     @user = User.find(params[:id])
+  if @user == current_user
+  else
+    redirect_to user_path(current_user.id)
+  end
   end
 
   def update
@@ -47,7 +52,11 @@ class UsersController < ApplicationController
 
   # 退会画面
   def unsubscribe
-     @user = User
+      @user = User.find(params[:id])
+  if @user == current_user
+  else
+    redirect_to user_path(current_user.id)
+  end
   end
 
   # 退会機能
