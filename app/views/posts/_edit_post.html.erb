@@ -1,6 +1,6 @@
 <%= form_with model: @post, local:true do |f| %>
 <div class="field01">
-  <%= f.label :画像 %></br>
+  <%= f.label :写真 %></br>
   <%= f.attachment_field :image %>
 </div>
 
@@ -18,7 +18,7 @@
   <%= f.text_area :post_profile, size: "45x5" %>
   </div>
   <div class="field01">
-  <%= f.label :タグ %></br>
+  <%= f.label :タグ（半角空白で区切り） %></br>
   <%= f.text_area :tag_list, value: @post.tag_list, size: "45x2" %>
   </div>
   <p>

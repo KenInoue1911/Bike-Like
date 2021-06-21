@@ -1,4 +1,5 @@
 class RelationshipsController < ApplicationController
+  before_action :move_to_signed_in
   # フォローする
   def create
     @user = User.find(params[:user_id])
@@ -21,5 +22,13 @@ class RelationshipsController < ApplicationController
   def followers
     user = User.find(params[:user_id])
     @users = user.followers
+  end
+
+  private
+    def move_to_signed_in
+    unless user_signed_in?
+      #サインインしていないユーザーはログインページが表示される
+      redirect_to  '/users/sign_in'
+    end
   end
 end

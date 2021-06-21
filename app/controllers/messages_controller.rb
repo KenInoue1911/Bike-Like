@@ -1,4 +1,5 @@
 class MessagesController < ApplicationController
+ before_action :move_to_signed_in
  # DMのメッセージ機能
 
   # メッセージを作成
@@ -13,6 +14,14 @@ class MessagesController < ApplicationController
 
   def message_params
     params.require(:message).permit(:user_id, :message, :room_id).merge(:user_id => current_user.id)
+  end
+
+  private
+    def move_to_signed_in
+    unless user_signed_in?
+      #サインインしていないユーザーはログインページが表示される
+      redirect_to  '/users/sign_in'
+    end
   end
 
 end

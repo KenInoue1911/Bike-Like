@@ -8,8 +8,6 @@ Rails.application.routes.draw do
    post '/homes/guest_sign_in', to: 'homes#guest_sign_in'
  # 退会確認画面
   get '/users/:id/unsubscribe' => 'users#unsubscribe', as: 'unsubscribe'
-  # 論理削除用のルーティング
-  patch '/users/:id/withdrawal' => 'users#withdrawal', as: 'withdrawal'
 
 
   resources :users do
@@ -18,7 +16,7 @@ Rails.application.routes.draw do
     get 'relationships/followers' => 'relationships#followers', as: 'followers'
   end
   resources :posts do
-    resources :post_comments, only: [:create, :destroy]
+    resources :post_comments   #, only: [:create, :destroy]
     resource :favorites, only: [:create, :destroy]
   end
   resources :messages, only: [:create]

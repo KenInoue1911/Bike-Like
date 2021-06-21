@@ -9,7 +9,9 @@
 <div class="message-form">
     <%= render 'messages/message-form', message: @message %>
 </div>
+
 <div class="back-chat-room">
+
     <%= link_to 'チャットルーム一覧へ戻る', rooms_path(current_user) %>
 </div>
-  
+

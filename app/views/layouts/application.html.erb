@@ -12,7 +12,11 @@
     </head>
     <body>
       <%= render 'layouts/header' %>
+      <div class="loader-wrap">
+      <div class="loader"></div>
+      </div>
     <main>
+      <%= render 'layouts/notifications' %>
         <%= yield %>
     </main>
       <%= render 'layouts/footer' %>
