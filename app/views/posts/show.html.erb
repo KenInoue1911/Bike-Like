@@ -58,7 +58,11 @@
        </div>
    </div>
    <div class="post_comment">
-     <%= render partial: 'posts/comment', locals: { post: @post,post_comments: @post_comments } %>
+     <%= render partial: 'posts/comment', locals: { post: @post, post_comments: @post_comments } %>
+   </div>
+   
+   <div class="pagenate">
+     <%= render partial: 'posts/pagenate', locals: { post_comments: @post_comments, page: @page } %>
    </div>
 
    <div class="show-comment-area">

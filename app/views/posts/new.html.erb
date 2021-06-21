@@ -1,6 +1,15 @@
 <h1 class="post-new-title">
   NEW BIKE
 </h1>
+<% if @post.errors.any? %>
+    <div id="error_explanation">
+      <ul>
+        <% @post.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        <% end %>
+      </ul>
+    </div>
 
 <%= render 'posts/edit_post', post: @post %>
 

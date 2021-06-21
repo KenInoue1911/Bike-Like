@@ -1,7 +1,23 @@
 ja:
  activerecord:
-  enums:
-    user:
+   models:
+      post:
+   attributes:
+     post:
+      title: "タイトル"
+      post_profile: "説明文"
+      post_bike: "バイク名"
+      image: "画像"
+
+     post_comment:
+      comment: "コメント"
+
+     user:
+      email: "メールアドレス"
+      password: "パスワード"
+      name: "名前"
+   enums:
+     user:
       gender:
        man: "男性"
        woman: "女性"

@@ -1,5 +1,5 @@
-<% if @post_comments.present? %>
-<% @post.post_comments.each do |post_comment| %>
+<% if post_comments.present? %>
+<% post_comments.each do |post_comment| p %>
 <div class="comment-card">
     <div class="comment-user-name">
         <%= link_to user_path(post_comment.user) do %>
@@ -27,10 +27,18 @@
     </div>
 </div>
 <% end %>
-<div class="pagenate">
-<%= paginate @post_comments %>
+
+
 </div>
-<% else %>
-<p>コメントはありません</p>
 <% end %>
+<% if @post_comment.errors.any? %>
+    <div id="error_explanation_comment">
+      <ul>
+        <% @post_comment.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        <% end %>
+      </ul>
+    </div>
+
 

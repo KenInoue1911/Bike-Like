@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-
+before_action :move_to_signed_in
   def new
     @post = Post.new
   end
@@ -7,14 +7,19 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     @post.user_id = current_user.id
-    @post.save
-    redirect_to posts_path
+    if @post.save
+       redirect_to posts_path
+    else
+      render :new
+    end
   end
 
   def index
     # gem ransackによる検索機能
     @q = Post.ransack(params[:q])
+    @q.sorts = 'updated_at desc' if @q.sorts.empty?
     @posts = @q.result.includes(:user).page(params[:page])
+
     # tag付け
     if params[:tag_name]
       @posts = Post.tagged_with("#{params[:tag_name]}")
@@ -24,7 +29,7 @@ class PostsController < ApplicationController
   def show
     @post = Post.find(params[:id])
     @post_comment = PostComment.new
-    @post_comments = PostComment.page(params[:page]).per(3)
+    @post_comments = @post.post_comments.order(id: 'desc').page(params[:page]).per(3)
   end
 
   def destroy
@@ -34,7 +39,7 @@ class PostsController < ApplicationController
   end
 
   def edit
-    @post = Post.find(params[:id])
+     @post = Post.find(params[:id])
   if @post.user == current_user
   else
     redirect_to post_path(@post.id)
@@ -42,9 +47,12 @@ class PostsController < ApplicationController
   end
 
   def update
-    @post = Post.find(params[:id])
-    @post.update(post_params)
-    redirect_to post_path(@post.id)
+     @post = Post.find(params[:id])
+  if @post.update(post_params)
+     redirect_to post_path(@post.id)
+  else
+    render :edit
+  end
   end
 
   def top
@@ -58,6 +66,12 @@ class PostsController < ApplicationController
 
    # 投稿データのストロングパラメータ
   private
+    def move_to_signed_in
+    unless user_signed_in?
+      #サインインしていないユーザーはログインページが表示される
+      redirect_to  '/users/sign_in'
+    end
+  end
 
   def post_params
     params.require(:post).permit(:title, :image, :post_profile, :post_bike, :tag_list)

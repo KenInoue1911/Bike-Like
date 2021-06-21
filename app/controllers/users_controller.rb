@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-
+before_action :move_to_signed_in
   def show
     @user = User.find(params[:id])
     @posts = @user.posts
@@ -60,14 +60,20 @@ class UsersController < ApplicationController
   end
 
   # 退会機能
-  def withdrawal
+  def destroy
      @user = User.find(params[:id])
-     @user.update(is_deleted: false)
+     @user.destroy
      reset_session
      redirect_to root_path
   end
 
   private
+    def move_to_signed_in
+    unless user_signed_in?
+      #サインインしていないユーザーはログインページが表示される
+      redirect_to  '/users/sign_in'
+    end
+  end
 
   def user_params
     params.require(:user).permit(:name, :age, :gender, :profile, :bike, :is_deleted, :avater)

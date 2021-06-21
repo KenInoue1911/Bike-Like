@@ -17,6 +17,7 @@
 @import 'font-awesome-sprockets';
 @import 'font-awesome';
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import "loading";
 
 * {
   margin: 0;
@@ -139,4 +140,19 @@ footer {
 
 .pagenate {
     text-align: center;
+}
+
+.alert {
+      padding: 15px;
+    margin-bottom: 0px;
+    /* border: 1px solid transparent; */
+    /* border-radius: 4px; */
+    text-align: center;
+    margin-top: 2;
+    line-height: 47px;
+}
+
+div#error_explanation {
+    text-align: center;
+    margin-top: 60px;
 }

@@ -6,11 +6,11 @@
   アカウントを二度と戻せなくなります。
   </h2>
   <% if current_user.name == "ゲストユーザー" %>
-  <h2>　　　　　　　　　　　　　　　　　　　　　　　　　　　退会できません</h2>
+  <h2>　　　　　　　　　　　　　　　　　　　　　　　　　　　　　退会できません</h2>
   <% else %>
  <div class="user-draw">
   <i class="fas fa-door-open"></i>
-  <%= link_to "退会する", withdrawal_path, method: :patch, data: { confilm: "本当に退会しますか？" } %>
+  <%= link_to "退会する",user_path(current_user.id), method: :delete, "data-confirm" => "本当に退会しますか？" %>
  </div>
  <div class="user-undraw">
   <i class="fas fa-door-closed"></i>
