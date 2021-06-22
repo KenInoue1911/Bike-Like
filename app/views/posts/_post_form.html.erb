@@ -1,57 +1,68 @@
 <% @posts.each do |post| %>
-<div class="photo-card">
- <div class="pohoto-background">
-  <%= link_to post_path(post.id) do %>
-  <%= attachment_image_tag post, :image, class: "image-size" %>
-  <% end %>
- </div>
- <div class="photo-details">
-   <div class="photo-user-icon">
-    <% if post.user.avater? %>
-      <%= image_tag post.user.avater.thumb.url, class: "user-avater-post" %>
-   <% else %>
-      <%= image_tag "/assets/default.jpg", :size => '70x70' %>
-      <% end %>
- </div>
-  <h3 class="photo-title">
-   <%= post.title.truncate(13) %>
-  </h3>
-  <span class="photo-author">
-    By<%= link_to user_path(post.user) do %>
-    <%= post.user.name %>
-    <% end %>
-  </span>
-  <p class="photo-text">
-    <%= post.post_profile.truncate(88) %>
-  </p>
 
-  <div class="photo-meta">
-    <div class="photo-bike">
-     <h6><%= post.post_bike.truncate(10) %></h6>
-    </div>
-    <div class="reaction">
-     <h6>リアクション</h6>
-     <ul>
-      <li>
-         <%= link_to "#{post.post_comments.count} コメント", post_path(post.id) %>
-
-      </li>
-      <li>
-       <div id="favorite_button_<%=post.id%>">
-       <%= render partial: 'favorites/favorite-btn', locals: {post: post} %>
+   <div class="photo-card">
+     <div class="pohoto-background">
+       <%= link_to post_path(post.id) do %>
+         <%= attachment_image_tag post, :image, class: "image-size" %>
+       <% end %>
+   </div>
+   
+   <div class="photo-details">
+      <div class="photo-user-icon">
+        <% if post.user.avater? %>
+          <%= image_tag post.user.avater.thumb.url, class: "user-avater-post" %>
+        <% else %>
+          <%= image_tag "/assets/default.jpg", :size => '70x70' %>
+        <% end %>
+      </div>
+      
+      <h3 class="photo-title">
+         <%= post.title.truncate(13) %>
+      </h3>
+      
+      <span class="photo-author">
+         By<%= link_to user_path(post.user) do %>
+           <%= post.user.name %>
+         <% end %>
+      </span>
+      
+      <p class="photo-text">
+        <%= post.post_profile.truncate(88) %>
+      </p>
+      
+      <div class="photo-meta">
+        <div class="photo-bike">
+          <h6>
+            <%= post.post_bike.truncate(10) %>
+          </h6>
+        </div>
+        
+        <div class="reaction">
+          <h6>
+            リアクション
+          </h6>
+          <ul>
+             <li>
+               <%= link_to "#{post.post_comments.count} コメント", post_path(post.id) %>
+             </li>
+             <li>
+               <div id="favorite_button_<%=post.id%>">
+                 <%= render partial: 'favorites/favorite-btn', locals: {post: post} %>
+               </div>
+             </li>
+         </ul>
+        </div>
        </div>
-      </li>
-
-
-     </ul>
-    </div>
-  </div>
-  <div class="photo-tags">
-   <h6>タグ</h6>
-   <ul>
-      <%= render 'posts/tag_list', tag_list: post.tag_list %>
-   </ul>
-  </div>
- </div>
- </div>
- <% end %>
+      
+      <div class="photo-tags">
+        <h6>
+          タグ
+        </h6>
+        <ul>
+         <%= render 'posts/tag_list', tag_list: post.tag_list %>
+        </ul>
+      </div>
+     
+   </div>
+</div>
+<% end %>

@@ -2,18 +2,10 @@
   BIKES
 </h1>
 
-<div class="search-form">
-  <%= search_form_for @q do |f| %>
-    <%= f.label :title, "タイトル" %>
-    <%= f.search_field :title_cont %>
-    <%= f.label :post_bike, "バイクタイトル" %>
-    <%= f.search_field :post_bike_cont %>
-    <%= f.submit "検索" %>
-  <% end %>
- </div>
+<%= render 'posts/search_post' %>
 
  <%= render 'posts/post_form' %>
 
-  <div class="pagenate">
- <%= paginate @posts %>
- </div>
+<div class="pagenate">
+   <%= paginate @posts %>
+</div>

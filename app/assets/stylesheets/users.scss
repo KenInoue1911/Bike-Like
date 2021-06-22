@@ -10,113 +10,122 @@
 
 // サインアップ
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
 .main-visual-user {
-  width: 100%;
-  height: 760px;
-  display: flex;
-  position: relative;
-}
-.main-title {
-  font-family: 'Lobster', cursive;
-  top: 20px;
-  right: 47%;
-  position: absolute;
+    width: 100%;
+    height: 760px;
+    display: flex;
+    position: relative;
+  }
 
-}
+.main-title {
+    font-family: 'Lobster', cursive;
+    top: 20px;
+    right: 47%;
+    position: absolute;
+  }
+
 #new_user {
-  margin-left: 43%;
-  margin-top: 93px;
-}
+    margin-left: 43%;
+    margin-top: 93px;
+  }
+
 .field0 {
-  padding: 10px 15px; /*ボックスを大きくする*/
-  font-size: 16px;
-  border: 2px solid #ddd; /*枠線*/
-}
+    padding: 10px 15px; /*ボックスを大きくする*/
+    font-size: 16px;
+    border: 2px solid #ddd; /*枠線*/
+  }
+
 .actions {
-  margin-left: -2px;
-}
+    margin-left: -2px;
+  }
+
 .signup-btn {
-  padding: 0.5em;
-  border-radius: 0.5em;
-  margin-left: 0%;
-  margin-top: 20px;
-}
+    padding: 0.5em;
+    border-radius: 0.5em;
+    margin-left: 0%;
+    margin-top: 20px;
+  }
+
 .signin-btn {
-  padding: 0.5em;
-  border-radius: 0.5em;
-  background-color: lightgray;
-  color: black;
-}
+    padding: 0.5em;
+    border-radius: 0.5em;
+    background-color: lightgray;
+    color: black;
+  }
 
 // サインイン
 .main-visual-user-signin {
-  width: 100%;
-  height: 415px;
-  display: flex;
-  position: relative;
-}
+    width: 100%;
+    height: 415px;
+    display: flex;
+    position: relative;
+  }
+
 form {
-  margin-left: 43%;
-  margin-top: 93px;
-}
+    margin-left: 43%;
+    margin-top: 93px;
+  }
 
 //ユーザー詳細画面
 .show-user-title {
-  text-align: center;
-  height: 0px;
-  font-family: 'Lobster', cursive;
-}
+    text-align: center;
+    height: 0px;
+    font-family: 'Lobster', cursive;
+  }
 
 .user-card {
     width: 100%;
     margin: 5% 0% 3%;
     vertical-align: top;
-
-}
-
+  }
+  
 .user-image {
     margin-left: 35%;
     margin-top: 6%;
     width: 6%;
-}
+  }
+
 .user-avater-usershow {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-}
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+  }
 
 p.user-name {
     margin-left: 45%;
     margin-top: -9%;
-}
+  }
 
 p.user-age {
     margin-left: 45%;
-}
+  }
+
 p.user-gender {
     margin-left: 45%;
-}
+  }
 
 p.user-bike {
     margin-left: 45%;
-}
+  }
+
 .user-text {
     margin-left: 45%;
     width: 25%;
     max-height: 200px;
     height: 200px;
-}
+  }
 
 .user-follow {
     margin-left: 35%;
     margin-top: -130px;
     width: 7%;
-}
+  }
+
 .follow-follower {
    margin-left: 35%;
     background: gray;
@@ -126,21 +135,23 @@ p.user-bike {
     margin-top: 3%;
 
     a {
-  color: white ;
+      color: white ;
+    }
   }
-}
+
 .chat-link {
-  margin-left: 35%;
+    margin-left: 35%;
     background: gray;
     padding: 0.5em;
     width: 6%;
     border-radius: 0.5em;
     margin-top: 1%;
 
-  a {
-  color: white ;
+    a {
+      color: white ;
+    }
   }
-}
+
 p.user-delete-btn {
     margin-left: 35%;
     background: gray;
@@ -148,10 +159,10 @@ p.user-delete-btn {
     width: 6%;
     border-radius: 0.5em;
 
-     a {
-  color: white ;
+    a {
+      color: white ;
+    }
   }
-}
 p.user-pofile-btn {
     margin-left: 35%;
     background: gray;
@@ -159,26 +170,28 @@ p.user-pofile-btn {
     width: 8%;
     border-radius: 0.5em;
 
-     a {
-  color: white ;
+    a {
+      color: white ;
+    }
   }
-}
 .user-btn-link {
     text-decoration: none;
     color: white ;
-}
+  }
+
 .follow-number {
- font-family: 'Parisienne', cursive;
- text-decoration: none;
- color: black;
-}
+   font-family: 'Parisienne', cursive;
+   text-decoration: none;
+   color: black;
+  }
+
 .user-follow-btn {
-  text-decoration: none;
-  color: white ;
-}
+    text-decoration: none;
+    color: white ;
+  }
 .user-chat {
     margin-top: -5%;
-}
+  }
 .user-chat-start {
     margin-left: -14%;
     background: gray;
@@ -187,13 +200,14 @@ p.user-pofile-btn {
     border-radius: 0.5em;
     color : white;
     margin-top: -1%;
-}
+  }
 
 //ユーザー一覧
 .user_search {
     margin-left: 2%;
     margin-top: 80px;
-}
+  }
+
 .index-user-card {
     display: inline-block;
     flex-direction: column;
@@ -204,52 +218,60 @@ p.user-pofile-btn {
     height: 162px;
     margin-top: 40px;
     vertical-align: top;
+  }
 
-}
 .index-user-box {
     padding: 20px 20px 10px 13px;
     border-bottom: solid 6px black;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
     border-radius: 9px;
-}
+  }
+
 .index-user-avater {
     text-align: center;
     margin-bottom: 20px;
-}
+  }
+
 .index-user-font {
-  color: gray;
-}
+    color: gray;
+  }
+
 .index-user-name {
-  text-align: center;
-}
+    text-align: center;
+  }
 .index-user-bike {
-  text-align: center;
-}
+    text-align: center;
+  }
 
 //ユーザー編集ページ
 .user-edit-main {
-  position: relative;
-}
+    position: relative;
+  }
+
 .user-edit-card {
-  position: absolute;
-  top: 120px;
-  left: 260px;
-}
+    position: absolute;
+    top: 120px;
+    left: 260px;
+  }
+
 .user-avater-useredit {
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-}
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+  }
+
 // ユーザー退会ページ
 .user-draw-title {
-  text-align: center;
-  height: 0px;
-  font-family: 'Lobster', cursive;
-}
+    text-align: center;
+    height: 0px;
+    font-family: 'Lobster', cursive;
+  }
+
 .user-draw-text {
     text-align: center;
     margin-top: 200px;
-}
+  }
+
 .user-draw {
     margin-left: 35%;
     background: gray;
@@ -260,9 +282,10 @@ p.user-pofile-btn {
     margin-bottom: 80px;
 
     a {
-  color: gold;
+      color: gold;
+    }
   }
-}
+
 .user-undraw {
     margin-left: 57%;
     background: gray;
@@ -272,7 +295,8 @@ p.user-pofile-btn {
     margin-top: -6%;
     margin-bottom: 150px;
 
-        a {
-  color: white;
-  }
-}
+    a {
+      color: white;
+    }
+  }  
+ 

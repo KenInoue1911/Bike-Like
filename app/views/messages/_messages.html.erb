@@ -1,28 +1,42 @@
 <div class="messages">
-    <% if messages.present? %>
-       <% messages.each do |message| %>
-          <% if message.user.id == current_user.id %>
-            <div class="right-message">
-              <%= render "messages/message_right", message: message %>
-            </div>
-         <% else %>
-            <div class="left-message">
-              <div class="chat-icon">
-                <%= link_to user_path(message.user) do %>
-                  <% if message.user.avater? %>
+  
+   <% if messages.present? %>
+      <% messages.each do |message| %>
+        <% if message.user.id == current_user.id %>
+        
+        <!--自分のチャット-->
+          <div class="right-message">
+            <%= render "messages/message_right", message: message %>
+          </div>
+          
+        <% else %>
+        <!--相手のチャット--->
+          <div class="left-message">
+            <div class="chat-icon">
+              <%= link_to user_path(message.user) do %>
+                 <% if message.user.avater? %>
                     <%= image_tag message.user.avater.thumb.url, class: "user-avater-post" %>
-                  <% else %>
+                 <% else %>
                     <%= image_tag "/assets/default.jpg", :size => '70x70' %>
-                  <% end %>
-                <% end %>
-              </div>
-              <div class="balloon-left">
-                <strong><%= message.message %></strong>
-              </div>
-           </div>
-         <% end %>
-       <% end %>
-    <% else %>
-      <h3 class="text-center">メッセージはまだありません</h3>
-    <% end %>
+                 <% end %>
+              <% end %>
+            </div>
+            
+            <!--相手のチャットメッセージ-->
+            <div class="balloon-left">
+              <strong>
+                <%= message.message %>
+              </strong>
+            </div>
+            
+          </div>
+          
+        <% end %>
+      <% end %>
+   <% else %>
+      <h3 class="text-center">
+        メッセージはまだありません
+      </h3>
+   <% end %>
+   
 </div>

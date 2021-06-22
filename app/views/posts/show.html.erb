@@ -1,77 +1,87 @@
 <h1 class="show-title">
    SHOW BIKE
 </h1>
+
 <div class="show-main">
-  <div class="show-photo">
-    <%= attachment_image_tag @post, :image, class: "show-user-photo" %>
-  </div>
-  <div class="show-area">
-    <div class="show-area-card">
-       <div class="show-user-avater">
-         <% if @post.user.avater? %>
-         <%= image_tag @post.user.avater.thumb.url, class: "user-avater-postshow" %>
-         <% else %>
-         <%= image_tag "/assets/default.jpg", :size => '200x150' %>
-         <% end %>
-       </div>
-       <div class="show-title-photo">
-         <%= @post.title %>
-       </div>
-       <div class="show-bike">
-         <i class="fas fa-motorcycle"></i>
-         <%= @post.post_bike %>
-       </div>
-       <div class="show-user-name">
-         By
-         <%= link_to user_path(@post.user) do %>
-         <%= @post.user.name %>
-         <% end %>
-       </div>
+   <div class="show-photo">
+     <%= attachment_image_tag @post, :image, class: "show-user-photo" %>
+   </div>
+   
+   <div class="show-area">
+      <div class="show-area-card">
+        <div class="show-user-avater">
+          <% if @post.user.avater? %>
+            <%= image_tag @post.user.avater.thumb.url, class: "user-avater-postshow" %>
+          <% else %>
+            <%= image_tag "/assets/default.jpg", :size => '200x150' %>
+          <% end %>
+        </div>
+        
+        <div class="show-title-photo">
+          <%= @post.title %>
+        </div>
+        
+        <div class="show-bike">
+          <i class="fas fa-motorcycle"></i>
+          <%= @post.post_bike %>
+        </div>
+        
+        <div class="show-user-name">
+          By<%= link_to user_path(@post.user) do %>
+           <%= @post.user.name %>
+          <% end %>
+        </div>
+        
        <div class="show-text">
          <%= @post.post_profile %>
        </div>
+       
        <div class="show-tags">
          <%= render 'posts/tag_list', tag_list: @post.tag_list %>
        </div>
+       
        <div class="show-collection">
          <div class="show-user-day">
-         <%= @post.created_at.strftime('%Y/%m/%d') %>
+           <%= @post.created_at.strftime('%Y/%m/%d') %>
          </div>
+         
          <div class="show-favorite">
            <div id="favorite_button_<%=@post.id%>">
-           <%= render partial: 'favorites/favorite-btn', locals: {post: @post} %>
-           </div>
+             <%= render partial: 'favorites/favorite-btn', locals: {post: @post} %>
+            </div>
          </div>
+         
          <% if @post.user == current_user %>
-         <div class="show-edit-btn">
-           <i class="fas fa-pencil-alt"></i>
-           <%= link_to "編集", edit_post_path(@post) %>
-         </div>
-         <div class="show-delete-btn">
-           <i class="fab fa-battle-net"></i>
-           <%= link_to "削除", post_path(@post), method: :delete %>
-         </div>
+           <div class="show-edit-btn">
+             <i class="fas fa-pencil-alt"></i>
+             <%= link_to "編集", edit_post_path(@post) %>
+           </div>
+           
+           <div class="show-delete-btn">
+             <i class="fab fa-battle-net"></i>
+             <%= link_to "削除", post_path(@post), method: :delete %>
+           </div>
          <% end %>
        </div>
+       
        <div class="show-comment">
          <%= render partial: 'posts/comment_count', locals: { post: @post,post_comment: @post_comment } %>
        </div>
+     </div>
+     
+     <div class="post_comment">
+       <%= render partial: 'posts/comment', locals: { post: @post, post_comments: @post_comments } %>
+     </div>
+     
+     <div class="pagenate">
+       <%= render partial: 'posts/pagenate', locals: { post_comments: @post_comments, page: @page } %>
+     </div>
+     
+     <div class="show-comment-area">
+       <%= form_with model:[@post, @post_comment], remote: :true do |f| %>
+         <%= f.text_area :comment, id:"post_comment_area", row:"5", placeholder:"コメントを入力してください", size: "40x5" %>
+         <p><%= f.submit "送信する", class: "comment-push-btn" %></p>
+       <% end %>
+     </div>
    </div>
-   <div class="post_comment">
-     <%= render partial: 'posts/comment', locals: { post: @post, post_comments: @post_comments } %>
-   </div>
-   
-   <div class="pagenate">
-     <%= render partial: 'posts/pagenate', locals: { post_comments: @post_comments, page: @page } %>
-   </div>
-
-   <div class="show-comment-area">
-     <%= form_with model:[@post, @post_comment], remote: :true do |f| %>
-     <%= f.text_area :comment, id:"post_comment_area", row:"5", placeholder:"コメントを入力してください", size: "40x5" %>
-     <p><%= f.submit "送信する", class: "comment-push-btn" %></p>
-     <% end %>
-   </div>
-
-   </div>
-  </div>
 </div>

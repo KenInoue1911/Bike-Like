@@ -1,63 +1,66 @@
 <header>
    <div class="header">
-       <!--fontawsome-->
-       <h1>Bike&Like</h1>
+      <h1>Bike&Like</h1>
     </div>
+    
     <div id="sp-menu">
       <h2>Bike&Like</h2>
-       <ul>
-        <% if user_signed_in? %>
-          <li>
-          <%= link_to "TOP", root_path %>
-        </li>
-        <li>
-          <%= link_to "ABOUT", about_path %>
-        </li>
-         <li>
-           <%= link_to "投稿一覧", posts_path %>
-         </li>
-         <li>
-           <%= link_to '投稿フォーム', new_post_path %>
-         </li>
-         <li>
-           <%= link_to '人気記事', posts_top_path %>
-         </li>
-         <li>
-           <%= link_to "いいね一覧", favorite_path %>
-         </li>
-         <li>
-           <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-         </li>
-         <li>
-           <%= link_to 'マイページ', user_path(current_user.id) %>
-         </li>
-         <li>
-           <%= link_to "ユーザー一覧", users_path %>
-         </li>
-         <li>
-           <%= link_to "チャットルーム一覧", rooms_path(current_user) %>
-         </li>
-        <% else %>
-        <li>
-          <%= link_to "TOP", root_path %>
-        </li>
-        <li>
-          <%= link_to "ABOUT", about_path %>
-        </li>
-          <li>
-            <%= link_to "新規登録", new_user_registration_path %>
-          </li>
-          <li>
-            <%= link_to "ログイン", new_user_session_path %>
-          </li>
+      
+        <ul>
+          <% if user_signed_in? %>
+            <li>
+              <%= link_to "TOP", root_path %>
+            </li>
+            <li>
+              <%= link_to "ABOUT", about_path %>
+            </li>
+            <li>
+              <%= link_to "投稿一覧", posts_path %>
+            </li>
+            <li>
+              <%= link_to '投稿フォーム', new_post_path %>
+            </li>
+            <li>
+              <%= link_to '人気記事', posts_top_path %>
+            </li>
+            <li>
+              <%= link_to "いいね一覧", favorite_path %>
+            </li>
+            <li>
+              <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+            </li>
+            <li>
+              <%= link_to 'マイページ', user_path(current_user.id) %>
+            </li>
+            <li>
+              <%= link_to "ユーザー一覧", users_path %>
+            </li>
+            <li>
+              <%= link_to "チャットルーム一覧", rooms_path(current_user) %>
+            </li>
+         <% else %>
+            <li>
+              <%= link_to "TOP", root_path %>
+            </li>
+            <li>
+              <%= link_to "ABOUT", about_path %>
+            </li>
+            <li>
+              <%= link_to "新規登録", new_user_registration_path %>
+            </li>
+            <li>
+              <%= link_to "ログイン", new_user_session_path %>
+            </li>
          <% end %>
-      </ul>
-    </div>
-    <div id="hm-icon">
-      <a class="menu-trigger">
+       </ul>
+   </div>
+   
+   <div id="hm-icon">
+     <a class="menu-trigger">
         <span></span>
         <span></span>
         <span></span>
-      </a>
-    </div>
-  </header>
+     </a>
+   </div>
+   
+</header>

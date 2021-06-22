@@ -1,24 +1,33 @@
 <!DOCTYPE html>
 <html>
    <head>
-     <title>Bike&Like</title>
+     <title>
+       Bike&Like
+     </title>
+     
       <%= csrf_meta_tags %>
       <%= csp_meta_tag %>
       <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
       <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <!-- コード追加　Bootstrap JavaScript読み込みコード-->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    </head>
-    <body>
+      <!-- コード追加　Bootstrap JavaScript読み込みコード-->
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+      </script>
+      
+   </head>
+   
+   <body>
       <%= render 'layouts/header' %>
       <div class="loader-wrap">
-      <div class="loader"></div>
+        <div class="loader"></div>
       </div>
-    <main>
-      <%= render 'layouts/notifications' %>
-        <%= yield %>
-    </main>
-      <%= render 'layouts/footer' %>
-     </body>
+      
+     <main>
+       <%= render 'layouts/notifications' %>
+       <%= yield %>
+     </main>
+     
+       <%= render 'layouts/footer' %>
+   </body>
+   
 </html>

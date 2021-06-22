@@ -1,6 +1,7 @@
 <h1 class="show-user-title">
    USERS
 </h1>
+
 <div class="user-search">
     <!----検索機能-->
     <%= search_form_for @q do |f| %>
@@ -11,5 +12,6 @@
     <%= f.submit "検索" %>
     <% end %>
 </div>
+
 
 <%= render 'users/user_form', users: @users %>

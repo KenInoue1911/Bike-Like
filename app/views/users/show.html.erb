@@ -2,7 +2,6 @@
   SHOW USER
 </h1>
 
-
 <div class="user-card">
    <div class="user-image">
       <% if @user.avater? %>
@@ -11,55 +10,64 @@
       <%= image_tag "/assets/default.jpg", :size => '150x150' %>
       <% end %>
     </div>
+    
     <p class="user-name">
       名前: <%= @user.name %>
     </p>
+    
     <p class="user-age">
       年齢: <%= @user.age %>
     </p>
+    
     <p class="user-gender">
       性別: <%= @user.gender %>
     </p>
+    
     <p class="user-bike">
       好きなバイク: <%= @user.bike %>
     </p>
+    
     <div class="user-text">
       自己紹介:
        <p>
          <%= @user.profile %>
        </p>
     </div>
+    
     <div id="user-follow_<%= @user.id %>" class="user-follow" >
       <%= render 'relationships/follow_count', user: @user %>
     </div>
+    
     <% if current_user != @user %>
-    <div class="follow-follower">
-    <div class="follow_<%= @user.id %>">
+      <div class="follow-follower">
+        <div class="follow_<%= @user.id %>">
+          <%= render 'relationships/follow-btn', user: @user %>
+    <% end %>
+        </div>
+      </div>
       
-      <%= render 'relationships/follow-btn', user: @user %>
-      <% end %>
-    </div>
-    </div>
     <% if @user.id == current_user.id %>
     <% else %>
-    <% if @isRoom == true %>
-      <div class="chat-link">
-       <i class="fas fa-comments"></i>
-       <a href="/rooms/<%= @roomId %>">
-         チャットへ
-       </a>
-    <% else %>
-    <%= form_with model: @room, url: rooms_path, local:true do |f| %>
-    <%= fields_for @entry do |e| %>
-    <%= e.hidden_field :user_id, :value => @user.id %>
+      <% if @isRoom == true %>
+        <div class="chat-link">
+          <i class="fas fa-comments"></i>
+          <a href="/rooms/<%= @roomId %>">
+            チャットへ
+          </a>
+      <% else %>
+        <%= form_with model: @room, url: rooms_path, local:true do |f| %>
+          <%= fields_for @entry do |e| %>
+            <%= e.hidden_field :user_id, :value => @user.id %>
+          <% end %>
+          <div class="user-chat">
+            <%= button_tag '<i class="fas fa-comment-dots"></i>チャットを始める'.html_safe, :type => "submit", class: "user-chat-start" %>
+          </div>
+        <% end %>
+      <% end %>
     <% end %>
-    <div class="user-chat">
-      <%= button_tag '<i class="fas fa-comment-dots"></i>チャットを始める'.html_safe, :type => "submit", class: "user-chat-start" %>
-    </div>
-    <% end %>
-    <% end %>
-    <% end %>
-    </div>
+       </div>
+       
+       
     <% if @user.id == current_user.id %>
       <p class="user-pofile-btn">
         <i class="fas fa-user-edit"></i>
@@ -70,7 +78,9 @@
         <%= link_to "退会する", unsubscribe_path(@user), class: "user-btn-link" %>
       </p>
     <% end %>
-  </div>
+ </div>
+
+<%= render 'posts/search_post' %>
 
 
 

@@ -1,19 +1,12 @@
-  <% if @message.errors.any? %>
-    <div id="error_explanation">
-      <ul>
-        <% @message.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-        <% end %>
-      </ul>
-    </div>
-
 <%= form_with model: @message, url: messages_path, remote: :true do |f| %>
-<div class="chat-text-area">
-  <%= f.text_area :message, id:"chat_comment_area", :placeholder => "メッセージを入力して下さい" , size: '100x5' %>
-  <%= f.hidden_field :room_id, :value => @room.id %><br>
-</div>
-  <div class="chat-submit">
-    <%= f.submit "投稿する", class: "chat-submit-btn" %>
-  </div>
+
+   <div class="chat-text-area">
+      <%= f.text_area :message, id:"chat_comment_area", :placeholder => "メッセージを入力して下さい" , size: '100x5' %>
+      <%= f.hidden_field :room_id, :value => @room.id %><br>
+   </div>
+   
+   <div class="chat-submit">
+      <%= f.submit "投稿する", class: "chat-submit-btn" %>
+   </div>
+   
 <% end %>

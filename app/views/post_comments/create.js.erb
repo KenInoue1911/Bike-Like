@@ -2,4 +2,3 @@ $(".post_comment").html("<%= j(render partial: "posts/comment", locals: {post: @
 $(".show-comment").html("<%= j(render partial: "posts/comment_count", locals: {post: @post,post_comment: @post_comment}) %>");
 $(".pagenate").html("<%= j(render partial: 'posts/pagenate', locals: { post_comments: @post_comments, page: @page }) %>");
 $('#post_comment_area').val('');
-location.reload();

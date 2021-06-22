@@ -5,72 +5,76 @@
 *= require_tree .
 *= require_self
 */
-
+// チャットルーム一覧
 .chat-title {
-    text-align: center;
-    height: 0px;
-    font-family: 'Lobster', cursive;
-}
+        text-align: center;
+        height: 0px;
+        font-family: 'Lobster', cursive;
+    }
 
 .chat-card {
-    display: inline-block;
-    flex-direction: column;
-    width: 100%;
-    max-width: 220px;
-    margin-left: 70px;
-    margin-bottom: 70px;
-    height: 162px;
-    margin-top: 40px;
-    vertical-align: top;
-}
+        display: inline-block;
+        flex-direction: column;
+        width: 100%;
+        max-width: 220px;
+        margin-left: 70px;
+        margin-bottom: 70px;
+        height: 162px;
+        margin-top: 40px;
+        vertical-align: top;
+    }
 
 .index-chat-box {
-    padding: 20px 20px 10px 13px;
-    border-bottom: solid 6px black;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
-    border-radius: 9px;
-}
+        padding: 20px 20px 10px 13px;
+        border-bottom: solid 6px black;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+        border-radius: 9px;
+    }
 
 .index-chat-user {
-  text-align: center;
-}
+      text-align: center;
+    }
+    
 .index-chat-message {
-  text-align: center;
-}
+      text-align: center;
+    }
+    
 .index-chat-font {
-  color: gray;
-}
+      color: gray;
+    }
+    
 //チャットルーム
 .show-chat-title {
-   text-align: center;
-   eight: 0px;
-   font-family: 'Lobster', cursive;
-}
+       text-align: center;
+       eight: 0px;
+       font-family: 'Lobster', cursive;
+    }
 .chat-icon-my {
-    margin-left: -10%;
-    margin-top: -3%;
-    margin-bottom: 6%;
-    width: 7%;
-}
+        margin-left: -10%;
+        margin-top: -3%;
+        margin-bottom: 6%;
+        width: 7%;
+    }
 
 .balloon-right {
-    width: 45%;
-    max-height: 120px;
-    margin-left: 130px;
-    height: 120px;
-}
+        width: 45%;
+        max-height: 120px;
+        margin-left: 130px;
+        height: 120px;
+    }
 
 .left-message {
-    height: 120px;
-}
+        height: 120px;
+    }
+    
 .chat-icon {
-    margin-left: 91%;
-    /* margin-bottom: 6%; */
-    /* width: 7%; */
-}
+        margin-left: 91%;
+        /* margin-bottom: 6%; */
+        /* width: 7%; */
+    }
 
 .balloon-left {
-    text-align: right;
-    margin-top: -62px;
-    width: 90%;
-}
+        text-align: right;
+        margin-top: -62px;
+        width: 90%;
+    }

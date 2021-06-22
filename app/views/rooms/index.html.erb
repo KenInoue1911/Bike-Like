@@ -1,23 +1,30 @@
 <h1 class="chat-title">
     CHAT ROOMS
 </h1>
+
 <% @rooms.each do |room| %>
- <% if @rooms.empty? %>
-    <h1 class="no-message">メッセージはありません</h1>
- <% else %>
- <div class="chat-card">
-   <div class="index-chat-box">
-     <%= link_to room_path(room), class: "index-chat-font" do %>
-      <div class="index-chat-user">
-        <i class="fas fa-user"></i>
-        <%= opponent_user(room) %>
-      </div>
-      <div class="index-chat-message">
-        <i class="fas fa-comment-dots"></i>
-        <%= most_new_message_preview(room) %>
-      </div>
+
+   <% if @rooms.empty? %>
+      <h1 class="no-message">
+        メッセージはありません
+      </h1>
+   <% else %>
+   
+   <div class="chat-card">
+     <div class="index-chat-box">
+       <%= link_to room_path(room), class: "index-chat-font" do %>
+         <div class="index-chat-user">
+           <i class="fas fa-user"></i>
+           <%= opponent_user(room) %>
+         </div>
+         
+         <div class="index-chat-message">
+           <i class="fas fa-comment-dots"></i>
+           <%= most_new_message_preview(room) %>
+         </div>
+     </div>
    </div>
-</div>
+   
 <% end %>
 <% end %>
 <% end %>
