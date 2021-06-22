@@ -35,7 +35,7 @@
     <% if current_user != @user %>
     <div class="follow-follower">
     <div class="follow_<%= @user.id %>">
-      
+
       <%= render 'relationships/follow-btn', user: @user %>
       <% end %>
     </div>
@@ -71,6 +71,16 @@
       </p>
     <% end %>
   </div>
+
+  <div class="search-form">
+  <%= search_form_for @q do |f| %>
+    <%= f.label :title, "タイトル" %>
+    <%= f.search_field :title_cont %>
+    <%= f.label :post_bike, "バイクタイトル" %>
+    <%= f.search_field :post_bike_cont %>
+    <%= f.submit "検索" %>
+  <% end %>
+ </div>
 
 
 

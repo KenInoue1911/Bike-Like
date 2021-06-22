@@ -1,8 +1,11 @@
 class UsersController < ApplicationController
 before_action :move_to_signed_in
   def show
+    @q = Post.ransack(params[:q])
+    @q.sorts = 'updated_at desc' if @q.sorts.empty?
+    @posts = @q.result.includes(:user).page(params[:page])
     @user = User.find(params[:id])
-    @posts = @user.posts
+    @posts = @user.posts.order(id: 'desc')
     # ユーザーがすでにルームに参加しているか判断
     @currentUserEntry = Entry.where(user_id: current_user.id)
     # ユーザー詳細ページのユーザーがルームに参加しているか判断
@@ -47,7 +50,7 @@ before_action :move_to_signed_in
   def index
     # gem ransackによる検索機能
     @q = User.ransack(params[:q])
-    @users = @q.result(distinct: true)
+    @users = @q.result(distinct: true).order(id: 'desc')
   end
 
   # 退会画面

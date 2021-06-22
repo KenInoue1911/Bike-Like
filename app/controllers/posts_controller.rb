@@ -29,7 +29,7 @@ before_action :move_to_signed_in
   def show
     @post = Post.find(params[:id])
     @post_comment = PostComment.new
-    @post_comments = @post.post_comments.order(id: 'desc').page(params[:page]).per(3)
+    @post_comments = @post.post_comments.order(id: 'desc').page(params[:page]).per(5)
   end
 
   def destroy

@@ -56,22 +56,21 @@
        <div class="show-comment">
          <%= render partial: 'posts/comment_count', locals: { post: @post,post_comment: @post_comment } %>
        </div>
-   </div>
-   <div class="post_comment">
-     <%= render partial: 'posts/comment', locals: { post: @post, post_comments: @post_comments } %>
-   </div>
-   
-   <div class="pagenate">
-     <%= render partial: 'posts/pagenate', locals: { post_comments: @post_comments, page: @page } %>
-   </div>
+      </div>
+      <div class="post_comment">
+      <%= render partial: 'posts/comment', locals: { post: @post, post_comments: @post_comments } %>
+      </div>
 
+     <div class="pagenate">
+     <%= render partial: 'posts/pagenate', locals: { post_comments: @post_comments, page: @page } %>
+     </div>
    <div class="show-comment-area">
      <%= form_with model:[@post, @post_comment], remote: :true do |f| %>
      <%= f.text_area :comment, id:"post_comment_area", row:"5", placeholder:"コメントを入力してください", size: "40x5" %>
      <p><%= f.submit "送信する", class: "comment-push-btn" %></p>
      <% end %>
    </div>
+   </div>
 
    </div>
   </div>
-</div>
