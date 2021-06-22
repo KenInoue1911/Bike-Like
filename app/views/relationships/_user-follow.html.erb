@@ -1,0 +1,5 @@
+<% if @users.empty? %>
+    <h3>ユーザはいません</h3>
+<% else %>
+    <%= render 'users/user_form', users: @users %>
+<% end %>

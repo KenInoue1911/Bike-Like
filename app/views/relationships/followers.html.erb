@@ -1,8 +1,5 @@
 <h1 class="show-user-title">
    FOLLOWER
 </h1>
-     <% if @users.empty? %>
-      <h3>ユーザーはいません</h3>
-      <% else %>
-        <%= render 'users/user_form', users: @users %>
-      <% end %>
+
+<%= render 'relationships/user-follow' %>

@@ -1,17 +1,18 @@
 <h1 class="show-chat-title">
    CHAT
 </h1>
+
 <div class="show-chat-main">
-    <div class="chat-messages">
-        <%= render 'messages/messages', messages: @messages %>
-    </div>
+     <div class="chat-messages">
+          <%= render 'messages/messages', messages: @messages %>
+     </div>
 </div>
+
 <div class="message-form">
-    <%= render 'messages/message-form', message: @message %>
+      <%= render 'messages/message-form', message: @message %>
 </div>
 
 <div class="back-chat-room">
-
-    <%= link_to 'チャットルーム一覧へ戻る', rooms_path(current_user) %>
+      <%= link_to 'チャットルーム一覧へ戻る', rooms_path(current_user) %>
 </div>
 

@@ -20,139 +20,156 @@
 @import "loading";
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
 header {
-  height: 76px;
-}
+        height: 76px;
+    }
 
 .header {
-  width: 100%;
-  padding: 10px 0;
-  margin: 0 auto;
-  text-align: center;
-  color: white;
-  // フォント使用
-  font-family: 'Lobster', cursive;
-  // ヘッダー固定
-  position: fixed;
-  background-color: black;
-  z-index: 1;
-}
+        width: 100%;
+        padding: 10px 0;
+        margin: 0 auto;
+        text-align: center;
+        color: white;
+        font-family: 'Lobster', cursive;  /*フォント使用*/
+        position: fixed;  /*ヘッダー固定*/
+        background-color: black;
+        z-index: 1;
+    }
 /* ---- ハンバーガーアイコン ---- */
 
 #hm-icon {
-  position: fixed;
-  right: 20px;
-  top: 20px;
-  z-index: 4;
-}
+        position: fixed;
+        right: 20px;
+        top: 20px;
+        z-index: 4;
+    }
+ 
 .menu-trigger,
 .menu-trigger span {
-  display: inline-block;
-  transition: all .4s;
-  box-sizing: border-box;
-}
+        display: inline-block;
+        transition: all .4s; // 全ての変化の時間
+        box-sizing: border-box;
+    }
+ 
 .menu-trigger {
-  position: relative;
-  width: 50px;
-  height: 44px;
-}
+        position: relative;
+        width: 50px;
+        height: 44px;
+    }
+ 
 .menu-trigger span {
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  background-color: white;
-  border-radius: 4px;
-}
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background-color: white;
+        border-radius: 4px; // 角を丸く
+    }
+ 
 .menu-trigger span:nth-child(1) {
-  top: 0;
-}
+        top: 0;
+    }
+ 
 .menu-trigger span:nth-child(2) {
-  top: 20px;
-}
+        top: 20px;
+    }
+ 
 .menu-trigger span:nth-child(3) {
-  bottom: 0;
-}
+        bottom: 0;
+    }
+ 
 .menu-trigger.active span:nth-child(1) {
-  -webkit-transform: translateY(20px) rotate(-45deg);
-  transform: translateY(20px) rotate(-45deg);
-  background-color: white;
-}
+        -webkit-transform: translateY(20px) rotate(-45deg);
+        transform: translateY(20px) rotate(-45deg);
+        background-color: white;
+    }
+ 
 .menu-trigger.active span:nth-child(2) {
-  opacity: 0;
-}
+        opacity: 0;
+    }
+
 .menu-trigger.active span:nth-child(3) {
-  -webkit-transform: translateY(-20px) rotate(45deg);
-  transform: translateY(-20px) rotate(45deg);
-  background-color: white;
-}
+        -webkit-transform: translateY(-20px) rotate(45deg);
+        transform: translateY(-20px) rotate(45deg);
+        background-color: white;
+    }
+ 
 /* ------ spメニュー ------ */
 #sp-menu {
-  position: fixed;
-  top: 0;
-  left: 0;
-  background: #000;
-  color: white;
-  width: 100%;
-  min-height: 100%;
-  display: none;
-  z-index: 3;
-  font-size: 3ex;
-}
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: #000;
+        color: white;
+        width: 100%;
+        min-height: 100%;
+        display: none;
+        z-index: 3;
+        font-size: 3ex;
+    }
+ 
 #sp-menu li {
-  text-align: center;
-  margin-bottom: 30px;
-}
+        text-align: center;
+        margin-bottom: 30px;
+    }
+ 
 #sp-menu a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-#sp-menu h2 {
-  font-family: 'Lobster', cursive;
-}
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+    }
 
+#sp-menu h2 {
+        font-family: 'Lobster', cursive;
+    }
+ 
+// フッター
 footer {
-  color: black;
-  text-align: center;
-  line-height: 120px;
-}
+        color: black;
+        text-align: center;
+        line-height: 120px;
+    }
+
 // ページネーション
 .pagination>li>a {
-  border: none;     /*枠線をなくす*/
-  color: #696969;   /*文字の色を変える*/
-}
+        border: none;     /*枠線をなくす*/
+        color: #696969;   /*文字の色を変える*/
+    }
 
 /* 表示しているページ番号のデザイン */
 .pagination>.active>a {
-  background: #93c9ff;     /*背景の色を変える*/
-  border-radius: 15px;     /*角を丸くする*/
-}
+        background: #93c9ff;     /*背景の色を変える*/
+        border-radius: 15px;     /*角を丸くする*/
+    }
 
 /*ホバー時のデザイン*/
 .pagination>li>a:hover {
-  border-radius: 15px;    /*角を丸くする*/
-}
-
+        border-radius: 15px;    /*角を丸くする*/
+    }
+    
+// ページネーション
 .pagenate {
-    text-align: center;
-}
-
+        text-align: center;
+    }
+    
+// フラッシュメッセージ
 .alert {
-      padding: 15px;
-    margin-bottom: 0px;
-    /* border: 1px solid transparent; */
-    /* border-radius: 4px; */
-    text-align: center;
-    margin-top: 2;
-    line-height: 47px;
-}
-
+        padding: 15px;
+        margin-bottom: 0px;
+        /* border: 1px solid transparent; */
+        /* border-radius: 4px; */
+        text-align: center;
+        margin-top: 2;
+        line-height: 47px;
+    }
+    
+// エラーメッセージ
 div#error_explanation {
-    text-align: center;
-    margin-top: 60px;
-}
+        text-align: center;
+        margin-top: 60px;
+    }

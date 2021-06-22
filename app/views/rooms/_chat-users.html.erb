@@ -1,9 +1,8 @@
 <% entries.each do |entry| %>
    <div class="show-chat-name">
-
-        <a href="/users/<%= entry.user.id %>"></a>
-     <div class="show-chat-yourname">
+      <a href="/users/<%= entry.user.id %>"></a>
+      <div class="show-chat-yourname">
         <p><%= entry.user.name %>さん</p>
-     </div>
+      </div>
    </div>
 <% end %>
