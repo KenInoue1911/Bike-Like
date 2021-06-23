@@ -1,5 +1,5 @@
 <% users.each do |user| %>
-
+<!--ユーザーカード-->
 <div class="index-user-card">
   <div class="index-user-box">
     <div class="index-user-avater">
@@ -9,12 +9,12 @@
         <%= image_tag "/assets/default.jpg", :size => '70x70' %>
      <% end %>
     </div>
-
+    <!--ユーザーネーム-->
     <div class="index-user-name">
       <%= link_to user_path(user.id), class: "index-user-font" do %>
       <i class="fas fa-user"></i><%= user.name %>
     </div>
-
+    <!--プロフィールバイク名-->
     <div class="index-user-bike">
       <i class="fas fa-motorcycle"></i><%= user.bike %>
     </div>

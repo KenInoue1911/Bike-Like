@@ -1,7 +1,7 @@
 <h1 class="favorite-top">
    FAVORITE BIKE
 </h1>
-
+   
    <% if @favorites.present? %>
       <% @favorites.each do |favorite| %>
         <div class="photo-card">
@@ -62,7 +62,8 @@
          </div>
        </div>
      <% end %>
-
+     
+  <!--お気に入りがない場合-->
   <% else %>
      <h1>
        　　　　　　　　　　　　　　　　　　　　　お気に入りはありません

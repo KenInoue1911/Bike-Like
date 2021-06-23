@@ -1,12 +1,13 @@
 <h1 class="show-title">
    SHOW BIKE
 </h1>
-
+<!--投稿詳細画面のカード全体-->
 <div class="show-main">
+  <!--投稿画像-->
    <div class="show-photo">
      <%= attachment_image_tag @post, :image, class: "show-user-photo" %>
    </div>
-   
+   <!--投稿詳細画面右側-->
    <div class="show-area">
       <div class="show-area-card">
         <div class="show-user-avater">
@@ -16,35 +17,35 @@
             <%= image_tag "/assets/default.jpg", :size => '200x150' %>
           <% end %>
         </div>
-        
+        <!--タイトル-->
         <div class="show-title-photo">
           <%= @post.title %>
         </div>
-        
+        <!--バイク名-->
         <div class="show-bike">
           <i class="fas fa-motorcycle"></i>
           <%= @post.post_bike %>
         </div>
-        
+        <!--名前-->
         <div class="show-user-name">
           By<%= link_to user_path(@post.user) do %>
            <%= @post.user.name %>
           <% end %>
         </div>
-        
+        <!--説明文-->
        <div class="show-text">
          <%= @post.post_profile %>
        </div>
-       
+       <!--タグ-->
        <div class="show-tags">
          <%= render 'posts/tag_list', tag_list: @post.tag_list %>
        </div>
-       
+       <!--日付-->
        <div class="show-collection">
          <div class="show-user-day">
            <%= @post.created_at.strftime('%Y/%m/%d') %>
          </div>
-         
+         <!--いいねボタン-->
          <div class="show-favorite">
            <div id="favorite_button_<%=@post.id%>">
              <%= render partial: 'favorites/favorite-btn', locals: {post: @post} %>
@@ -63,20 +64,20 @@
            </div>
          <% end %>
        </div>
-       
+       <!--コメント件数-->
        <div class="show-comment">
          <%= render partial: 'posts/comment_count', locals: { post: @post,post_comment: @post_comment } %>
        </div>
      </div>
-     
+     <!--コメントカード-->
      <div class="post_comment">
        <%= render partial: 'posts/comment', locals: { post: @post, post_comments: @post_comments } %>
      </div>
-     
+     <!--ページネーション-->
      <div class="pagenate">
        <%= render partial: 'posts/pagenate', locals: { post_comments: @post_comments, page: @page } %>
      </div>
-     
+     <!--コメント入力画面-->
      <div class="show-comment-area">
        <%= form_with model:[@post, @post_comment], remote: :true do |f| %>
          <%= f.text_area :comment, id:"post_comment_area", row:"5", placeholder:"コメントを入力してください", size: "40x5" %>

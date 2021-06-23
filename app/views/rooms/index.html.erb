@@ -9,7 +9,7 @@
         メッセージはありません
       </h1>
    <% else %>
-   
+   <!--チャットカード-->
    <div class="chat-card">
      <div class="index-chat-box">
        <%= link_to room_path(room), class: "index-chat-font" do %>
@@ -17,7 +17,7 @@
            <i class="fas fa-user"></i>
            <%= opponent_user(room) %>
          </div>
-         
+         <!--チャットメッセージ内容の表示-->
          <div class="index-chat-message">
            <i class="fas fa-comment-dots"></i>
            <%= most_new_message_preview(room) %>

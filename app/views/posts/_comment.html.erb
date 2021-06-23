@@ -1,49 +1,51 @@
 <% post_comments.each do |post_comment| p %>
 
-  <div class="comment-card">
-      <div class="comment-user-name">
-         <%= link_to user_path(post_comment.user) do %>
-             <%= post_comment.user.name %>
-         <% end %>
-      </div>
+<!--コメントエリア-->
+<div class="comment-card">
+    <!--コメントのユーザーネーム-->
+    <div class="comment-user-name">
+       <%= link_to user_path(post_comment.user) do %>
+           <%= post_comment.user.name %>
+       <% end %>
+    </div>
 
-      <div class="comment-user-avater">
-         <% if @post.user.avater? %>
-           <%= image_tag @post.user.avater.thumb.url, class: "user-avater-comment" %>
-         <% else %>
-           <%= image_tag "/assets/default.jpg", :size => '100x100' %>
-         <% end %>
-      </div>
+    <div class="comment-user-avater">
+       <% if @post.user.avater? %>
+         <%= image_tag @post.user.avater.thumb.url, class: "user-avater-comment" %>
+       <% else %>
+         <%= image_tag "/assets/default.jpg", :size => '100x100' %>
+       <% end %>
+    </div>
+    <!--コメントした日付-->
+    <div class="comment-day">
+       <%= post_comment.created_at.strftime('%Y/%m/%d') %>
+    </div>
+    <!--コメント削除ボタン-->
+    <% if post_comment.user == current_user %>
+       <div class="comment-delete">
+           <i class="fas fa-backspace"></i>
+           <%= link_to "コメントを削除", post_post_comment_path(post_comment.post, post_comment), remote: :true,  method: :delete %>
+       </div>
+    <% end %>
+    <!--コメント内容-->
+    <div class="comment-text">
+       <%= post_comment.comment %>
+    </div>
 
-      <div class="comment-day">
-         <%= post_comment.created_at.strftime('%Y/%m/%d') %>
-      </div>
-
-      <% if post_comment.user == current_user %>
-         <div class="comment-delete">
-             <i class="fas fa-backspace"></i>
-             <%= link_to "コメントを削除", post_post_comment_path(post_comment.post, post_comment), remote: :true,  method: :delete %>
-         </div>
-      <% end %>
-
-      <div class="comment-text">
-         <%= post_comment.comment %>
-      </div>
-      
-  </div>
+</div>
 
 <% end %>
-
-  <% if @post_comment.errors.any? %>
-     <div id="error_explanation_comment">
-         <ul>
-             <% @post_comment.errors.full_messages.each do |message| %>
-                 <li>
-                     <%= message %>
-                 </li>
-             <% end %>
-             <% end %>
-         </ul>
-     </div>
+<!--エラーメッセージコメント-->
+<% if @post_comment.errors.any? %>
+   <div id="error_explanation_comment">
+       <ul>
+           <% @post_comment.errors.full_messages.each do |message| %>
+               <li>
+                   <%= message %>
+               </li>
+           <% end %>
+           <% end %>
+       </ul>
+   </div>
 
 
