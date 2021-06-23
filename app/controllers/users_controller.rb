@@ -5,8 +5,6 @@ class UsersController < ApplicationController
       @q = Post.ransack(params[:q])
       # 検索結果を新しい順
       @q.sorts = 'updated_at desc' if @q.sorts.empty?
-      # ページネーション
-      @posts = @q.result.includes(:user).page(params[:page])
       @user = User.find(params[:id])
       # 新しい順にそのユーザーが投稿したものを表示
       @posts = @user.posts.order(id: 'desc')
@@ -45,7 +43,6 @@ class UsersController < ApplicationController
         redirect_to user_path(current_user.id)
       end
     end
-    
     def update
       @user = User.find(params[:id])
       @user.update(user_params)

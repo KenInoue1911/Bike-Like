@@ -1,3 +1,5 @@
-フォロー<%= link_to @user.followings.count, user_follows_path(@user.id), class: "follow-number" %></br>
-      </br>
+<!--フォロー、フォロワー数の表示-->
+フォロー<%= link_to @user.followings.count, user_follows_path(@user.id), class: "follow-number" %></br></br>
+
+
 フォロワー<%= link_to @user.followers.count, user_followers_path(@user.id), class: "follow-number" %>

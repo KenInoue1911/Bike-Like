@@ -1,12 +1,13 @@
 <% @posts.each do |post| %>
-
+   <!--投稿カード-->
    <div class="photo-card">
+     <!--画像表示場所-->
      <div class="pohoto-background">
        <%= link_to post_path(post.id) do %>
          <%= attachment_image_tag post, :image, class: "image-size" %>
        <% end %>
    </div>
-   
+   <!--画像情報表示場所-->
    <div class="photo-details">
       <div class="photo-user-icon">
         <% if post.user.avater? %>
@@ -15,37 +16,40 @@
           <%= image_tag "/assets/default.jpg", :size => '70x70' %>
         <% end %>
       </div>
-      
+      <!--タイトル表示（13字まで）-->
       <h3 class="photo-title">
          <%= post.title.truncate(13) %>
       </h3>
-      
+      <!--ユーザーネーム-->
       <span class="photo-author">
          By<%= link_to user_path(post.user) do %>
            <%= post.user.name %>
          <% end %>
       </span>
-      
+      <!--画像の説明文(88字まで)-->
       <p class="photo-text">
         <%= post.post_profile.truncate(88) %>
       </p>
-      
+      <!--リアクション、バイク名-->
       <div class="photo-meta">
+        <!--バイク名-->
         <div class="photo-bike">
           <h6>
-            <%= post.post_bike.truncate(10) %>
+            <%= post.post_bike %>
           </h6>
         </div>
-        
+        <!--コメント数、フォローボタン-->
         <div class="reaction">
           <h6>
             リアクション
           </h6>
           <ul>
              <li>
+               <!--コメント数-->
                <%= link_to "#{post.post_comments.count} コメント", post_path(post.id) %>
              </li>
              <li>
+               <!--いいねボタン-->
                <div id="favorite_button_<%=post.id%>">
                  <%= render partial: 'favorites/favorite-btn', locals: {post: post} %>
                </div>
@@ -53,7 +57,7 @@
          </ul>
         </div>
        </div>
-      
+     <!--タグ --> 
       <div class="photo-tags">
         <h6>
           タグ

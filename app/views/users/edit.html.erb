@@ -1,7 +1,7 @@
 <h1 class="show-user-title">
     PROFILE EDIT
 </h1>
-
+<!--ユーザー編集画面-->
 <div class="user-edit-main">
      <div class="user-edit-card">
          <% if @user.avater? %>
@@ -10,7 +10,7 @@
              <%= image_tag "/assets/default.jpg", :size => '250x250' %>
          <% end %>
      </div>
-
+    
 <%= form_with model:@user, local:true do |f| %>
       <div class="field01">
          <%= f.file_field :avater, accept: 'image/jpeg,image/gif,image/png' %>
@@ -43,7 +43,7 @@
          <%= f.label :自己紹介 %><br />
          <%= f.text_area :profile, autofocus: true, autocomplete: "profile", size: "40x5" %>
       </div>
-      
+      <!--ゲストユーザーは編集できないように設定-->
       <% if current_user.name == "ゲストユーザー" %>
          <h2>編集できません</h2>
       <% else %>

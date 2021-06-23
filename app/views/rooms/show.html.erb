@@ -1,13 +1,13 @@
 <h1 class="show-chat-title">
    CHAT
 </h1>
-
+<!--チャット内容-->
 <div class="show-chat-main">
      <div class="chat-messages">
           <%= render 'messages/messages', messages: @messages %>
      </div>
 </div>
-
+<!--チャットメッセージ入力-->
 <div class="message-form">
       <%= render 'messages/message-form', message: @message %>
 </div>

@@ -20,11 +20,13 @@ class PostsController < ApplicationController
       # 検索結果の新しい順
       @q.sorts = 'updated_at desc' if @q.sorts.empty?
       # tag付け
-      @posts = Post.tagged_with(params[:tag_name].to_s) if params[:tag_name]
-      # ransackとページネーションの使用
-      @posts = @q.result.includes(:user).page(params[:page])
+      @posts = Post.tagged_with(params[:tag_name]).page(params[:page]) if params[:tag_name]
+      if @posts == nil
+        # ransackとページネーションの使用
+        @posts = @q.result.includes(:user).page(params[:page])
+      end
     end
-    
+
 
     def show
       @post = Post.find(params[:id])
