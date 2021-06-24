@@ -16,6 +16,7 @@ ja:
       email: "メールアドレス"
       password: "パスワード"
       name: "名前"
+      profile: "自己紹介"
    enums:
      user:
       gender:

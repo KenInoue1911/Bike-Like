@@ -26,7 +26,7 @@ $(function() {
   });
 });
 
-/*
+
 $(function() {
     $('.blog-area1').slick({
         autoplay: true,
@@ -47,7 +47,7 @@ $(function() {
         autoplaySpeed: 6000,
     });
 });
-*/
+
 
  });
 

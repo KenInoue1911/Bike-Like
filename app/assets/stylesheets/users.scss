@@ -34,6 +34,27 @@
     margin-top: 93px;
   }
 
+ @media screen and (max-width: 768px) {
+  #new_user {
+    margin-left: 29%;
+    margin-top: 93px;
+ }
+}
+
+ @media screen and (max-width: 425px) {
+  #new_user {
+    margin-left: 12%;
+    margin-top: 95px;
+
+  .actions {
+    margin-left: 50px;
+  }
+ }
+}
+
+
+
+
 .field0 {
     padding: 10px 15px; /*ボックスを大きくする*/
     font-size: 16px;
@@ -71,6 +92,26 @@ form {
     margin-top: 93px;
   }
 
+ @media screen and (max-width: 768px) {
+  form {
+    margin-left: 34%;
+    margin-top: 93px;
+ }
+}
+
+ @media screen and (max-width: 425px) {
+  form {
+    margin-left: 10%;
+    margin-top: 136px;
+    width: 80%;
+
+  input#user_email {
+    max-width: 100%;
+  }
+ }
+}
+
+
 //ユーザー詳細画面
 .show-user-title {
     text-align: center;
@@ -83,7 +124,7 @@ form {
     margin: 5% 0% 3%;
     vertical-align: top;
   }
-  
+
 .user-image {
     margin-left: 35%;
     margin-top: 6%;
@@ -298,5 +339,221 @@ p.user-pofile-btn {
     a {
       color: white;
     }
-  }  
- 
+  }
+
+  // ユーザー編集画面レスポンシブ
+ @media screen and (max-width: 768px) {
+   .user-edit-card {
+    display: none;
+
+}
+}
+
+ @media screen and (max-width: 425px) {
+   textarea#user_profile {
+    width: 100%;
+}
+}
+
+// ユーザー詳細画面
+ @media screen and (max-width: 768px) {
+   .user-image {
+    margin-left: 20%;
+    margin-top: 10%;
+    width: 20%;
+}
+}
+
+ @media screen and (max-width: 768px) {
+   p.user-name {
+    margin-left: 45%;
+    margin-top: -19%;
+}
+}
+
+ @media screen and (max-width: 768px) {
+   .user-text {
+    margin-left: 45%;
+    width: 50%;
+    max-height: 175px;
+    height: 175px;
+}
+}
+
+ @media screen and (max-width: 768px) {
+   .user-follow {
+    margin-left: 22%;
+    margin-top: -130px;
+    width: 11%;
+}
+}
+
+ @media screen and (max-width: 768px) {
+   p.user-pofile-btn {
+    margin-left: 20%;
+    width: 20%;
+}
+}
+
+ @media screen and (max-width: 768px) {
+   p.user-delete-btn {
+    margin-left: 20%;
+    width: 12%;
+    border-radius: 0.5em;
+}
+}
+ @media screen and (max-width: 425px) {
+   .user-image {
+    margin-left: 10%;
+    margin-top: 20%;
+    width: 26%;
+
+    img {
+    width: 100px;
+    height: 100px;
+}
+}
+}
+
+ @media screen and (max-width: 425px) {
+   p.user-name {
+    margin-left: 45%;
+    margin-top: -27%;
+}
+}
+
+ @media screen and (max-width: 425px) {
+   .user-follow {
+    margin-left: 11%;
+    margin-top: -170px;
+    width: 25%;
+}
+}
+
+ @media screen and (max-width: 425px) {
+   p.user-pofile-btn {
+    margin-left: 1%;
+    width: 41%;
+}
+}
+
+ @media screen and (max-width: 425px) {
+   p.user-delete-btn {
+    margin-left: 7%;
+    padding: 0.5em;
+    width: 25%;
+}
+}
+
+ @media screen and (max-width: 425px) {
+   .user-text {
+    margin-left: 45%;
+    width: 70%;
+    max-height: 175px;
+    height: 175px;
+}
+}
+
+ @media screen and (max-width: 768px) {
+   .follow-follower {
+    margin-left: 21%;
+    width: 16%;
+    margin-top: 3%;
+}
+}
+
+
+ @media screen and (max-width: 768px) {
+   .user-chat {
+    margin-top: -5%;
+    width: 61%;
+}
+}
+
+ @media screen and (max-width: 768px) {
+   .user-chat-start {
+    margin-left: -34%;
+    width: 50%;
+    margin-top: -1%;
+}
+}
+
+ @media screen and (max-width: 768px) {
+   .chat-link {
+    margin-left: 21%;
+    width: 14%;
+    margin-top: 1%;
+}
+}
+
+ @media screen and (max-width: 425px) {
+   .chat-link {
+    margin-left: 8%;
+    width: 29%;
+    margin-top: 1%;
+}
+}
+
+ @media screen and (max-width: 425px) {
+   .follow-follower {
+    margin-left: 6%;
+    width: 33%;
+    margin-top: 8%;
+}
+}
+
+ @media screen and (max-width: 425px) {
+   .user-chat-start {
+    margin-left: -12%;
+    width: 84%;
+    margin-top: -5%;
+}
+}
+
+ @media screen and (max-width: 425px) {
+   .chat-link {
+    margin-left: 7%;
+    width: 28%;
+    margin-top: 1%;
+}
+}
+
+
+// 退会確認画面レスポンシブ
+ @media screen and (max-width: 768px) {
+   .user-draw {
+    margin-left: 20%;
+    width: 13%;
+    margin-top: 4%;
+}
+}
+
+ @media screen and (max-width: 768px) {
+   .user-undraw {
+    margin-left: 63%;
+    width: 14%;
+    margin-top: -114px;
+}
+}
+
+ @media screen and (max-width: 425px) {
+   .user-draw {
+    margin-left: 7%;
+    width: 25%;
+    margin-top: 4%;
+}
+}
+
+ @media screen and (max-width: 425px) {
+   .user-undraw {
+    margin-left: 65%;
+    width: 29%;
+    margin-top: -114px;
+}
+}
+
+ @media screen and (max-width: 425px) {
+   .user-draw-text {
+    font-size: 20px;
+}
+}

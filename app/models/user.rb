@@ -4,10 +4,11 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   validates :name, length: { in: 1..9 }
-  
+  validates :profile,    length: { maximum: 200 }
+
   # ユーザー画像
   mount_uploader :avater, AvaterUploader
-  
+
   # ユーザーのアカウントが削除されると関連するものも
   has_many :posts, dependent: :destroy
   has_many :post_comments, dependent: :destroy
@@ -23,7 +24,7 @@ class User < ApplicationRecord
   has_many :followers, through: :passive_of_relationships, source: :follower
   # 自分がフォローしている人
   has_many :followings, through: :relationships, source: :followed
-  
+
   #フォローする
   def follow(user_id)
     relationships.create(followed_id: user_id)
