@@ -34,15 +34,15 @@
 .index-chat-user {
       text-align: center;
     }
-    
+
 .index-chat-message {
       text-align: center;
     }
-    
+
 .index-chat-font {
       color: gray;
     }
-    
+
 //チャットルーム
 .show-chat-title {
        text-align: center;
@@ -51,7 +51,7 @@
     }
 .chat-icon-my {
         margin-left: -10%;
-        margin-top: -3%;
+        margin-top: -7%;
         margin-bottom: 6%;
         width: 7%;
     }
@@ -66,15 +66,108 @@
 .left-message {
         height: 120px;
     }
-    
+
 .chat-icon {
         margin-left: 91%;
-        /* margin-bottom: 6%; */
-        /* width: 7%; */
     }
 
 .balloon-left {
-        text-align: right;
-        margin-top: -62px;
-        width: 90%;
+       text-align: right;
+       margin-top: -62px;
+       width: 43%;
+       margin-left: 46%;
     }
+
+//チャットルームレスポンシブ
+ @media screen and (max-width: 768px) {
+       .chat-icon-my {
+       margin-left: -22%;
+       margin-top: -27%;
+       margin-bottom: 6%;
+       width: 17%;
+}
+}
+
+ @media screen and (max-width: 768px) {
+       .balloon-right {
+       width: 56%;
+       max-height: 120px;
+       margin-left: 130px;
+       height: 120px;
+       margin-bottom: 20px;
+}
+}
+
+ @media screen and (max-width: 768px) {
+       .balloon-left {
+       text-align: right;
+       margin-top: -70px;
+       width: 56%;
+       margin-left: 30%;
+}
+}
+
+ @media screen and (max-width: 768px) {
+       .chat-icon {
+       margin-left: 87%;
+}
+}
+
+ @media screen and (max-width: 768px) {
+       .chat-text-area {
+       width: 81%;
+       margin-left: -16%;
+
+       textarea#chat_comment_area {
+       width: 100%;
+}
+}
+}
+
+ @media screen and (max-width: 768px) {
+       input.chat-submit-btn {
+       margin-left: 43px;
+}
+}
+
+ @media screen and (max-width: 425px) {
+       .chat-icon-my {
+       margin-left: -29%;
+       margin-top: -85%;
+       margin-bottom: 6%;
+       width: 27%;
+}
+}
+
+ @media screen and (max-width: 425px) {
+       .balloon-right {
+       width: 69%;
+       max-height: 120px;
+       margin-left: 98px;
+       height: 120px;
+       margin-bottom: 20px;
+}
+}
+
+@media screen and (max-width: 425px) {
+       .balloon-left {
+       text-align: right;
+       margin-top: -74px;
+       width: 73%;
+       margin-left: 8%;
+}
+}
+
+ @media screen and (max-width: 425px) {
+       .chat-icon {
+       margin-left: 84%;
+       margin-top: 110px;
+}
+}
+
+ @media screen and (max-width: 425px) {
+       .message-form {
+       margin-left: 8%;
+       margin-right: -187px;
+}
+}

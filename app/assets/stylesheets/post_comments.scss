@@ -77,5 +77,11 @@ div#error_explanation_comment {
     margin-left: 32%;
     margin-bottom: 40px;
     margin-top: 20px;
-  }
+    
+ @media screen and (max-width: 425px) {
+    margin-left: 14%;
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+}
 
