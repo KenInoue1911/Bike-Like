@@ -49,22 +49,26 @@
        eight: 0px;
        font-family: 'Lobster', cursive;
     }
+
+.right-message {
+       height: auto;
+       margin-bottom: 90px;
+    }
+
 .chat-icon-my {
-        margin-left: -10%;
-        margin-top: -7%;
-        margin-bottom: 6%;
-        width: 7%;
+        margin-left: 2%;
+        width: 4%;
     }
 
 .balloon-right {
         width: 45%;
-        max-height: 120px;
         margin-left: 130px;
-        height: 120px;
+        margin-top: -63px;
     }
 
 .left-message {
-        height: 120px;
+        height: auto;
+        margin-bottom: 90px;
     }
 
 .chat-icon {
@@ -81,20 +85,17 @@
 //チャットルームレスポンシブ
  @media screen and (max-width: 768px) {
        .chat-icon-my {
-       margin-left: -22%;
-       margin-top: -27%;
-       margin-bottom: 6%;
-       width: 17%;
+        margin-left: 5%;
+        width: 10%;
 }
 }
 
  @media screen and (max-width: 768px) {
        .balloon-right {
        width: 56%;
-       max-height: 120px;
        margin-left: 130px;
-       height: 120px;
        margin-bottom: 20px;
+       margin-top: -75px;
 }
 }
 
@@ -131,21 +132,17 @@
 }
 
  @media screen and (max-width: 425px) {
-       .chat-icon-my {
-       margin-left: -29%;
-       margin-top: -85%;
-       margin-bottom: 6%;
-       width: 27%;
+      .chat-icon-my {
+      margin-left: 0%;
+      width: 20%;
 }
 }
 
  @media screen and (max-width: 425px) {
-       .balloon-right {
-       width: 69%;
-       max-height: 120px;
-       margin-left: 98px;
-       height: 120px;
-       margin-bottom: 20px;
+      .balloon-right {
+      width: 76%;
+      margin-left: 82px;
+      margin-top: -74px;
 }
 }
 
@@ -169,5 +166,12 @@
        .message-form {
        margin-left: 8%;
        margin-right: -187px;
+}
+}
+
+@media screen and (max-width: 425px) {
+     .left-message {
+     height: auto;
+     margin-bottom: 70px;
 }
 }
