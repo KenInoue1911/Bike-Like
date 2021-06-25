@@ -1,16 +1,19 @@
 <!--自分のチャットメッセージ-->
-<div class="balloon-right">
-  
-   <strong>
-     <%= message.message %>
-   </strong>
-   
-   <div class="chat-icon-my">
+
+<div class="right-message">
+  <div class="chat-icon-my">
      <% if message.user.avater? %>
         <%= image_tag message.user.avater.thumb.url, class: "user-avater-post" %>
      <% else %>
         <%= image_tag "/assets/default.jpg", :size => '70x70' %>
      <% end %>
    </div>
-   
+<div class="balloon-right">
+   <strong>
+     <%= message.message %>
+   </strong>
+
+
+
+</div>
 </div>
