@@ -34,8 +34,65 @@
 .blog-image1 {
     width: 100%;
     height: 248px;
-    background-size: cover;
+    background-size: 100% 100%;
+    background-image: image-url("bike1.png");
   }
+
+ .blog-image01 {
+    background-image: image-url("bike01.png");
+    width: 100%;
+    height: 248px;
+    background-size: 100% 100%;
+ }
+
+ .blog-image001 {
+    background-image: image-url("bike001.png");
+    width: 100%;
+    height: 248px;
+    background-size: 100% 100%;
+ }
+
+ .blog-image12 {
+    background-image: image-url("bike2.jpg");
+    width: 100%;
+    height: 248px;
+    background-size: 100% 100%;
+ }
+
+ .blog-image02 {
+    background-image: image-url("bike02.jpg");
+    width: 100%;
+    height: 248px;
+    background-size: 100% 100%;
+ }
+
+ .blog-image002 {
+    background-image: image-url("bike002.jpg");
+    width: 100%;
+    height: 248px;
+    background-size: 100% 100%;
+ }
+
+ .blog-image3 {
+    background-image: image-url("bike3.jpg");
+    width: 100%;
+    height: 248px;
+    background-size: 100% 100%;
+ }
+
+ .blog-image03 {
+    background-image: image-url("bike03.jpg");
+    width: 100%;
+    height: 248px;
+    background-size: 100% 100%;
+ }
+
+ .blog-image003 {
+    background-image: image-url("bike003.jpg");
+    width: 100%;
+    height: 248px;
+    background-size: 100% 100%;
+ }
 
 .blog-area2 {
     width: 100%;
@@ -56,7 +113,7 @@
 .blog-image2 {
     width: 100%;
     height: 744px;
-    background-image: url(/assets/highway.jpg);
+    background-image: image-url("highway.jpg");
     background-size: cover;
     background-color: rgba( 0, 0, 0, 0.5);
   }
@@ -210,7 +267,7 @@
     position: absolute;
   }
 
- @media screen and (max-width: 768px) {    
+ @media screen and (max-width: 768px) {
   .staff {
     top: 68px;
     left: 6%;
@@ -223,15 +280,15 @@
     left: 38%;
     position: absolute;
   }
-  
- @media screen and (max-width: 768px) {  
+
+ @media screen and (max-width: 768px) {
   .keninoue {
     top: 127px;
     left: 10%;
     position: absolute;
  }
 }
-  
+
  @media screen and (max-width: 425px) {
   .keninoue {
     top: 122px;
@@ -251,7 +308,7 @@
     left: 55%;
     position: absolute;
   }
-  
+
  @media screen and (max-width: 768px) {
   .keninoue-text {
     top: 230px;
