@@ -10,8 +10,8 @@
     </div>
 
     <div class="comment-user-avater">
-       <% if @post.user.avater? %>
-         <%= image_tag @post.user.avater.thumb.url, class: "user-avater-comment" %>
+       <% if post_comment.user.avater? %>
+         <%= image_tag post_comment.user.avater.thumb.url, class: "user-avater-comment" %>
        <% else %>
          <%= image_tag asset_path("default.jpg"), :size => '100x100' %>
        <% end %>
