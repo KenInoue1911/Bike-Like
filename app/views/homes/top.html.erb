@@ -2,54 +2,54 @@
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    
+
     <!--画像スクロール上-->
    <div class="blog">
       <div class="blog-area1">
-        <div class="blog-slide"><img class="blog-image1" src="/assets/bike1.png"></div>
-        <div class="blog-slide"><img class="blog-image1" src="/assets/bike01.png"></div>
-        <div class="blog-slide"><img class="blog-image1" src="/assets/bike001.png"></div>
+        <div class="blog-slide"><img class="blog-image1"></div>
+        <div class="blog-slide"><img class="blog-image01"></div>
+        <div class="blog-slide"><img class="blog-image001"></div>
       </div>
       <!--画像スクロール中-->
       <div class="blog-area2">
-        <div class="blog-slide"><img class="blog-image1" src="/assets/bike2.jpg"></div>
-        <div class="blog-slide"><img class="blog-image1" src="/assets/bike02.jpg"></div>
-        <div class="blog-slide"><img class="blog-image1" src="/assets/bike002.jpg"></div>
+        <div class="blog-slide"><img class="blog-image12"></div>
+        <div class="blog-slide"><img class="blog-image02"></div>
+        <div class="blog-slide"><img class="blog-image002"></div>
       </div>
       <!--画像スクロール下-->
       <div class="blog-area3">
-        <div class="blog-slide"><img class="blog-image1" src="/assets/bike3.jpg"></div>
-        <div class="blog-slide"><img class="blog-image1" src="/assets/bike03.jpg"></div>
-        <div class="blog-slide"><img class="blog-image1" src="/assets/bike003.jpg"></div>
+        <div class="blog-slide"><img class="blog-image3"></div>
+        <div class="blog-slide"><img class="blog-image03"></div>
+        <div class="blog-slide"><img class="blog-image003"></div>
       </div>
-      
+
    </div>
    <div class="sidebar">
       <h1 class="sidebar-text">
         ようこそ！Bike＆Likeへ！
       </h1>
-      
+
       <h4 class="sidebar-main">
         あなたはどんなバイクが好みですか？</br>
         かっこいい塗装や、かっこいいカスタム。</br>
         おしゃれな風景を投稿して共有しよう！
       </h4>
-      
+
       <h4 class="login">
         <i class="fas fa-sign-in-alt"></i>
         <%= link_to "ログイン", new_user_session_path %>
       </h4>
-      
+
       <h4 class="signup">
         <i class="fas fa-user-plus"></i>
         <%= link_to "新規登録", new_user_registration_path %>
       </h4>
-      
+
       <h4 class="guest">
         <i class="fas fa-user-tie"></i>
         <%= link_to 'ゲストログイン', homes_guest_sign_in_path, method: :post %>
       </h4>
-      
+
       <div class="blog-image2">
       </div>
    </div>
