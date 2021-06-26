@@ -6,7 +6,7 @@
      <% if user.avater? %>
         <%= image_tag user.avater.thumb.url, class: "user-avater-post" %>
      <% else %>
-        <%= image_tag "/assets/default.jpg", :size => '70x70' %>
+        <%= image_tag asset_path("default.jpg"), :size => '70x70' %>
      <% end %>
     </div>
     <!--ユーザーネーム-->

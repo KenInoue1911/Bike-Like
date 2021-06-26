@@ -43,6 +43,15 @@
     margin-top: 40px;
     vertical-align: top;
     max-height: 685px;
+
+
+}
+}
+
+ @media screen and (max-width: 425px) {
+    .photo-card {
+     margin-left: 0px;
+
 }
 }
 
@@ -286,7 +295,7 @@ a {
   }
 
 .show-edit-btn {
-    width: 10%;
+    width: 8%;
     margin-left: 55%;
     margin-top: -21px;
     background: gray;
@@ -299,7 +308,7 @@ a {
   }
 
 .show-delete-btn {
-    width: 10%;
+    width: 8%;
     margin-top: -25px;
     margin-left: 80%;
     background: gray;
@@ -537,7 +546,7 @@ input.comment-push-btn {
     margin-top: 24px;
     max-height: 131px;
     height: 100%;
-    margin-bottom: 60px;
+    margin-bottom: 90px;
     width: 85%;
 }
 }

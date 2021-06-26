@@ -7,7 +7,7 @@
          <% if @user.avater? %>
              <%= image_tag @user.avater.thumb.url, class: "user-avater-useredit" %>
          <% else %>
-             <%= image_tag "/assets/default.jpg", :size => '250x250' %>
+             <%= image_tag asset_path("default.jpg"), :size => '250x250' %>
          <% end %>
      </div>
 

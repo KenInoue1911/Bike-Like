@@ -1,7 +1,7 @@
 <h1 class="favorite-top">
    FAVORITE BIKE
 </h1>
-   
+
    <% if @favorites.present? %>
       <% @favorites.each do |favorite| %>
         <div class="photo-card">
@@ -16,7 +16,7 @@
               <% if favorite.user.avater? %>
                 <%= image_tag favorite.user.avater.thumb.url, class: "user-avater-post" %>
               <% else %>
-                <%= image_tag "/assets/default.jpg", :size => '70x70' %>
+                <%= image_tag asset_path("default.jpg"), :size => '70x70' %>
               <% end %>
             </div>
 
@@ -62,7 +62,7 @@
          </div>
        </div>
      <% end %>
-     
+
   <!--お気に入りがない場合-->
   <% else %>
      <h1>

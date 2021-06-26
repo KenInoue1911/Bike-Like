@@ -1,14 +1,14 @@
 <div class="messages">
-  
+
    <% if messages.present? %>
       <% messages.each do |message| %>
         <% if message.user.id == current_user.id %>
-        
+
         <!--自分のチャット-->
-          
+
             <%= render "messages/message_right", message: message %>
-          
-          
+
+
         <% else %>
         <!--相手のチャット--->
           <div class="left-message">
@@ -17,20 +17,20 @@
                  <% if message.user.avater? %>
                     <%= image_tag message.user.avater.thumb.url, class: "user-avater-post" %>
                  <% else %>
-                    <%= image_tag "/assets/default.jpg", :size => '70x70' %>
+                    <%= image_tag asset_path("default.jpg"), :size => '70x70' %>
                  <% end %>
               <% end %>
             </div>
-            
+
             <!--相手のチャットメッセージ-->
             <div class="balloon-left">
               <strong>
                 <%= message.message %>
               </strong>
             </div>
-            
+
           </div>
-          
+
         <% end %>
       <% end %>
    <% else %>
@@ -38,5 +38,5 @@
         メッセージはまだありません
       </h3>
    <% end %>
-   
+
 </div>

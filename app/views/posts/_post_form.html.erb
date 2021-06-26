@@ -13,7 +13,7 @@
         <% if post.user.avater? %>
           <%= image_tag post.user.avater.thumb.url, class: "user-avater-post" %>
         <% else %>
-          <%= image_tag "/assets/default.jpg", :size => '70x70' %>
+          <%= image_tag asset_path("default.jpg"), :size => '70x70' %>
         <% end %>
       </div>
       <!--タイトル表示（13字まで）-->
@@ -57,7 +57,7 @@
          </ul>
         </div>
        </div>
-     <!--タグ --> 
+     <!--タグ -->
       <div class="photo-tags">
         <h6>
           タグ
@@ -66,7 +66,7 @@
          <%= render 'posts/tag_list', tag_list: post.tag_list %>
         </ul>
       </div>
-     
+
    </div>
 </div>
 <% end %>

@@ -14,7 +14,7 @@
           <% if @post.user.avater? %>
             <%= image_tag @post.user.avater.thumb.url, class: "user-avater-postshow" %>
           <% else %>
-            <%= image_tag "/assets/default.jpg", :size => '200x150' %>
+            <%= image_tag asset_path("default.jpg"), :size => '200x150' %>
           <% end %>
         </div>
         <!--タイトル-->
@@ -51,16 +51,16 @@
              <%= render partial: 'favorites/favorite-btn', locals: {post: @post} %>
             </div>
          </div>
-         
+
          <% if @post.user == current_user %>
            <div class="show-edit-btn">
              <i class="fas fa-pencil-alt"></i>
              <%= link_to "編集", edit_post_path(@post) %>
            </div>
-           
+
            <div class="show-delete-btn">
              <i class="fab fa-battle-net"></i>
-             <%= link_to "削除", post_path(@post), method: :delete %>
+             <%= link_to "削除", post_path(@post), method: :delete, "data-confirm" => "本当に削除しますか？" %>
            </div>
          <% end %>
        </div>
