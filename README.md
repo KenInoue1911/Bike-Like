@@ -36,6 +36,9 @@ https://docs.google.com/spreadsheets/d/17iFRXlIbSYpwkZcGBidXUwKYOdpinoL10PzY4qcJ
 ## WBSシート  
 https://docs.google.com/spreadsheets/d/1lVuWwwajG65twU49Hf3t0T3dLg0m9UOjhPi2tsvNf8k/edit#gid=1773513600
 
+## プレゼンURL
+https://docs.google.com/presentation/d/1EWTQkbAvt9j-V8RI1yBO_D12hoTJIQe6k05vdvHe9Ao/edit?usp=sharing
+
 ## 開発環境
 - OS：Linux(CentOS)
 - 言語：HTML,CSS,JavaScript,Ruby,SQL
