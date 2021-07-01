@@ -25,7 +25,7 @@
 - バイク好きとコミュニケーションをとりたいとき。
 
 ## サイトURL
-https://bike-like.work/
+http://bike-like.work/
 
 ## 設計書
 https://docs.google.com/spreadsheets/d/1s_sFWVE5M9HTe6TY7fUT6yB6tJ6t5YtQjT8cWwttssA/edit#gid=1335546229
