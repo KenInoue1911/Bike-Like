@@ -47,8 +47,6 @@ $(function() {
         autoplaySpeed: 6000,
     });
 });
-
-
  });
 
 
