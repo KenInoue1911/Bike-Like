@@ -10,7 +10,7 @@
              <%= image_tag asset_path("default.jpg"), :size => '250x250' %>
          <% end %>
      </div>
-
+     
     <% if @user.errors.any? %>
     <div id="error_explanation">
       <ul>
@@ -22,17 +22,17 @@
     <% end %>
       </ul>
     </div>
-
+    
 <%= form_with model:@user, local:true do |f| %>
       <div class="field01">
          <%= f.file_field :avater, accept: 'image/jpeg,image/gif,image/png' %>
       </div>
-
+     
       <div class="field01">
          <%= f.label :名前（必須） %><br />
          <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
       </div>
-
+     
       <div class="field01">
          <%= f.label :年齢 %><br />
          <%= f.text_field :age, autofocus: true, autocomplete: "age" %>
