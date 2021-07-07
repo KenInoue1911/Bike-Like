@@ -80,4 +80,5 @@ group :production do
 gem 'mysql2'
 gem 'rubocop', require: false
 gem 'rubocop-rails', require: false
+gem 'selenium-webdriver'
 end
