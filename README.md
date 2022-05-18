@@ -14,16 +14,6 @@
 そこで、多くの人に共有してもらい、コロナの中でバイクに乗る機会の減った人でも、これを機にバイクに乗りたくなった！
 と感じていただければ幸いです。
 
-### ターゲットユーザ
-- 基本・・バイク好きのユーザー
-- 性別・・主に男性
-- 年齢・・青年期、壮年期
-
-### 主な利用シーン
-- 自分のバイクを投稿したいとき
-- 誰かと走りたいとき
-- バイク好きとコミュニケーションをとりたいとき。
-
 ## サイトURL
 http://bike-like.work/
 
@@ -32,14 +22,3 @@ https://docs.google.com/spreadsheets/d/1s_sFWVE5M9HTe6TY7fUT6yB6tJ6t5YtQjT8cWwtt
 
 ## プレゼンURL
 https://docs.google.com/presentation/d/1EWTQkbAvt9j-V8RI1yBO_D12hoTJIQe6k05vdvHe9Ao/edit?usp=sharing
-
-## 開発環境
-- OS：Linux(CentOS)
-- 言語：HTML,CSS,JavaScript,Ruby,SQL
-- フレームワーク：Ruby on Rails
-- JSライブラリ：jQuery
-- IDE：Cloud9
-
-## 使用素材
-ゆんフリー　http://www.yunphoto.net/jp/photobase/yp14046.html
-
