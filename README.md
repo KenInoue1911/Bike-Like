@@ -30,12 +30,6 @@ http://bike-like.work/
 ## 設計書
 https://docs.google.com/spreadsheets/d/1s_sFWVE5M9HTe6TY7fUT6yB6tJ6t5YtQjT8cWwttssA/edit#gid=1335546229
 
-## チャレンジ要素一覧
-https://docs.google.com/spreadsheets/d/17iFRXlIbSYpwkZcGBidXUwKYOdpinoL10PzY4qcJ738/edit?usp=sharing
-
-## WBSシート  
-https://docs.google.com/spreadsheets/d/1lVuWwwajG65twU49Hf3t0T3dLg0m9UOjhPi2tsvNf8k/edit#gid=1773513600
-
 ## プレゼンURL
 https://docs.google.com/presentation/d/1EWTQkbAvt9j-V8RI1yBO_D12hoTJIQe6k05vdvHe9Ao/edit?usp=sharing
 
